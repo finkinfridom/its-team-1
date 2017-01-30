@@ -1,0 +1,9 @@
+C:\Users\swolley\Documents\gitrepos\its-team-1\ristorante\ristorante\bin\Debug\ristorante.exe.config
+C:\Users\swolley\Documents\gitrepos\its-team-1\ristorante\ristorante\bin\Debug\ristorante.exe
+C:\Users\swolley\Documents\gitrepos\its-team-1\ristorante\ristorante\bin\Debug\ristorante.pdb
+C:\Users\swolley\Documents\gitrepos\its-team-1\ristorante\ristorante\obj\Debug\ristorante.csprojResolveAssemblyReference.cache
+C:\Users\swolley\Documents\gitrepos\its-team-1\ristorante\ristorante\obj\Debug\ristorante.Form1.resources
+C:\Users\swolley\Documents\gitrepos\its-team-1\ristorante\ristorante\obj\Debug\ristorante.Properties.Resources.resources
+C:\Users\swolley\Documents\gitrepos\its-team-1\ristorante\ristorante\obj\Debug\ristorante.csproj.GenerateResource.Cache
+C:\Users\swolley\Documents\gitrepos\its-team-1\ristorante\ristorante\obj\Debug\ristorante.exe
+C:\Users\swolley\Documents\gitrepos\its-team-1\ristorante\ristorante\obj\Debug\ristorante.pdb

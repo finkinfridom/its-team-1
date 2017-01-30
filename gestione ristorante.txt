@@ -1,0 +1,15 @@
+GESTIONE RISTORANTE
+Il programma gestisce il servizio di un ristorante, lato CASSA (conti, stampa ricevute, riassunto del servizio), lato TABLET AL TAVOLO/APP SCARICABILE (gestione comande, aggiornamenti giacenze automatiche). opzionale sito front-end (registrazione cliente, prenotazione online).
+LATO CUCINA si possono aggiornare giacenze alimenti, nel caso finiscano e vengono disattivati dal menù.
+
+DEVICES
+cassa = windows form
+tablet al tavolo/app su telefono cliente = app su tablet/telefono (android)
+
+REQUISITI/RISORSE
+server web + database sql
+sito frontend (php+html)
+visual studio + xamarin
+tablet android x ordini al tavolo
+pc windows x cassa
+interfacciamento stampante per scontrini?

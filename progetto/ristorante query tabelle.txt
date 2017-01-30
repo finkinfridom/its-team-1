@@ -1,0 +1,99 @@
+CREATE TABLE INGREDIENTI
+(
+  nome_ingr VARCHAR(50) NOT NULL,
+  descrizione VARCHAR(100),
+  esaurito boolean,
+  PRIMARY KEY (nome_ingr)
+);
+
+CREATE TABLE TAVOLO
+(
+  num_tavolo INT NOT NULL,
+  libero boolean NOT NULL,
+  PRIMARY KEY (num_tavolo)
+);
+
+CREATE TABLE CATEGORIA
+(
+  nome VARCHAR(50) NOT NULL,
+  PRIMARY KEY (nome)
+);
+
+CREATE TABLE SERVIZIO
+(
+  giorno_ora timestamp NOT NULL,
+  ora_fine time,
+  num_persone INT NOT NULL,
+  totale INT NOT NULL,
+  num_servizio INT NOT NULL,
+  num_tavolo INT NOT NULL,
+  PRIMARY KEY (giorno_ora),
+  FOREIGN KEY (num_tavolo) REFERENCES TAVOLO(num_tavolo)
+);
+
+CREATE TABLE COMANDA
+(
+  numero INT NOT NULL,
+  giorno_ora timestamp NOT NULL,
+  PRIMARY KEY (numero),
+  FOREIGN KEY (giorno_ora) REFERENCES SERVIZIO(giorno_ora)
+);
+
+CREATE TABLE PRODOTTI
+(
+  nome_prod VARCHAR(50) NOT NULL,
+  descrizione VARCHAR(100),
+  cod_prodotto INT NOT NULL,
+  nel_menu INT NOT NULL,
+  nome VARCHAR(50) NOT NULL,
+  PRIMARY KEY (cod_prodotto),
+  FOREIGN KEY (nome) REFERENCES CATEGORIA(nome),
+  UNIQUE (nome_prod)
+);
+
+CREATE TABLE CLIENTE
+(
+  cod_cliente INT NOT NULL,
+  nome VARCHAR(50) NOT NULL,
+  mail VARCHAR(50) NOT NULL,
+  telefono VARCHAR(20) NOT NULL,
+  cognome VARCHAR(50) NOT NULL,
+  punti INT NOT NULL,
+  giorno_ora timestamp NOT NULL,
+  PRIMARY KEY (cod_cliente),
+  FOREIGN KEY (giorno_ora) REFERENCES SERVIZIO(giorno_ora),
+  UNIQUE (mail),
+  UNIQUE (telefono)
+);
+
+CREATE TABLE PRENOTAZIONE
+(
+  cod_prenotazione INT NOT NULL,
+  ora time NOT NULL,
+  giorno DATE NOT NULL,
+  num_persone INT NOT NULL,
+  gg_prenotazione DATE NOT NULL,
+  cod_cliente INT NOT NULL,
+  PRIMARY KEY (cod_prenotazione),
+  FOREIGN KEY (cod_cliente) REFERENCES CLIENTE(cod_cliente)
+);
+
+CREATE TABLE elenco
+(
+  stato INT NOT NULL,
+  numero INT NOT NULL,
+  cod_prodotto INT NOT NULL,
+  PRIMARY KEY (numero),
+  FOREIGN KEY (numero) REFERENCES COMANDA(numero),
+  FOREIGN KEY (cod_prodotto) REFERENCES PRODOTTI(cod_prodotto)
+);
+
+CREATE TABLE contenuto
+(
+  nome_ingr VARCHAR(50) NOT NULL,
+  cod_prodotto INT NOT NULL,
+  PRIMARY KEY (nome_ingr, cod_prodotto),
+  FOREIGN KEY (nome_ingr) REFERENCES INGREDIENTI(nome_ingr),
+  FOREIGN KEY (cod_prodotto) REFERENCES PRODOTTI(cod_prodotto)
+);
+

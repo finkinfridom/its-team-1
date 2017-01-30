@@ -47,6 +47,7 @@ SPECIFICHE PROGETTAZIONE
 APP UTENTE deve poter inserire dei filtri nel menù per escludere potenziali ingredienti di cui è allergico
 APP UTENTE bottone assistenza per chiamare al tavolo un cameriere nel caso si voglia chiedere consigli, informazioni, assistenza utilizzo software
 APP UTENTE visualizza a destra, lista espandibile dei piatti ordinati, dello stato dei piatti (in preparazione, consegnati), prezzi e totale a pagare. Selezionando i piatti singolarmente il totale si aggiorna così si possono fare i conti di chi ha preso cosa per raccogliere i soldi al tavolo
+per riconoscere il tavolo dal proprio cellulare si fotografa un qrcode? così ogni persona ad un tavolo può guardare il suo menù e scegliere indipendentemente.
 
 
 

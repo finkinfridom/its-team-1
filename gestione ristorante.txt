@@ -23,15 +23,34 @@ prenotazione online
 scelta piatti online e quando si arriva la cucina sta già preparando
 è possibile capire tramite gps quando un cliente si avvicina al locale per dare ok alla cucina?
 
-2nda settimana
-struttura db, definizione classi, bozza wireframe/sito/cassa/app
+TABELLA MARCIA
 
-4ta settimana
+12 febbraio 2017
+struttura db
+definizione classi
+bozza wireframe sito/cassa/app/gestione contenuti
+
+26 febbraio 2017
 gestione prenotazioni
+visione prodotti per test interfaccia
 
-6ta settimana
+12 marzo 2017
 gestione utenti registrazione (dati personali o accedi con...facebook, google, ecc)
-privacy disclaimer
+burocrazia/ modulistica (privacy/trattamento dati, condizioni acquisto)
+contenuti per fase testing
 
-8va settimana
-testing, inserimento contenuti
+26 marzo 2017
+consegna programma
+
+
+SPECIFICHE PROGETTAZIONE
+APP UTENTE deve poter inserire dei filtri nel menù per escludere potenziali ingredienti di cui è allergico
+APP UTENTE bottone assistenza per chiamare al tavolo un cameriere nel caso si voglia chiedere consigli, informazioni, assistenza utilizzo software
+APP UTENTE visualizza a destra, lista espandibile dei piatti ordinati, dello stato dei piatti (in preparazione, consegnati), prezzi e totale a pagare. Selezionando i piatti singolarmente il totale si aggiorna così si possono fare i conti di chi ha preso cosa per raccogliere i soldi al tavolo
+
+
+
+link utili
+mail gruppo:   git.itsteam1@gmail.com
+trello         git.itsteam1@gmail.com
+

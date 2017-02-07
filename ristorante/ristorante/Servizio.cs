@@ -9,23 +9,18 @@ namespace ristorante
 
 public class Servizio
     {
-        DateTime giorno_ora;
-        DateTime ora_fine;
-        int num_persone;
-        int num_servizio;
-        int num_tavolo;
-        int cod_cliente;
-        float totaleAPagare()
-        {
-            float totale;
-            
-            //totale = select somma prodotti legati a servizio/comanda;
-            return totale;
-        }
+        public DateTime giorno_ora { get; set; }
+        public DateTime ora_fine { get; set; }
+        public int num_persone { get; set; }
+        public int num_servizio { get; set; }
+        public int num_tavolo { get; set; }
+        public int cod_cliente { get; set; }
+        public float totale { get; set; }
 
         public Servizio()
         {
-            DateTime giorno_ora = DateTime.Now;
+            this.giorno_ora = DateTime.Now;
         }
+
     }
 }

@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="stylesheet" href="fonts/roboto/css/fonts.css">
+    
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    
+    <link href="css/ionic.app.css" rel="stylesheet">
+    
+
+    <style type="text/css">
+      .platform-ios .manual-ios-statusbar-padding{
+        padding-top:20px;
+      }
+      .manual-remove-top-padding{
+        padding-top:0px; 
+      }
+      .manual-remove-top-padding .scroll{
+        padding-top:0px !important;
+      }
+      ion-list.manual-list-fullwidth div.list, .list.card.manual-card-fullwidth {
+        margin-left:-10px;
+        margin-right:-10px;
+      }
+      ion-list.manual-list-fullwidth div.list > .item, .list.card.manual-card-fullwidth > .item {
+        border-radius:0px;
+        border-left:0px;
+        border-right: 0px;
+      }
+      .show-list-numbers-and-dots ul{
+        list-style-type: disc;
+        padding-left:40px;
+      }
+      .show-list-numbers-and-dots ol{
+        list-style-type: decimal;
+        padding-left:40px;
+      }
+    </style>
+
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/routes.js"></script>
+    
+     
+    <script src="js/directives.js"></script>
+     
+    <script src="js/services.js"></script>
+    
+
+    <!-- Only required for Tab projects w/ pages in multiple tabs 
+    <script src="lib/ionicuirouter/ionicUIRouter.js"></script>
+    -->
+
+  </head>
+  <body ng-app="app" animation="slide-left-right-ios7">
+  <div>
+  <ion-side-menus enable-menu-with-back-views="false" data-componentid="side-menu21">
+    <ion-side-menu-content>
+      <ion-nav-bar class="bar-dark">
+        <ion-nav-back-button></ion-nav-back-button>
+        <ion-nav-buttons side="left">
+          <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+        </ion-nav-buttons>
+      </ion-nav-bar>
+      <ion-nav-view></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left" id="side-menu21" style="background-color:#1B1B1B;">
+      <ion-header-bar class="bar-dark">
+        <div class="title">Menu</div>
+      </ion-header-bar>
+      <ion-content ng-controller="menuCtrl" padding="false" class="side-menu-left has-header ">
+        <div data-componentid="image1">
+          <img src="img/ZX86WpkSSau3Kqwrfgrv_sfondo.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+        </div>
+        <div id="menu-button-bar1" class="button-bar" data-componentid="button-bar1">
+          <a ui-sref="tabsController.events" menu-close="" id="menu-button4" class="button button-energized  button-block button-clear icon ion-android-calendar" data-componentid="button4"></a>
+          <a ui-sref="food" menu-close="" id="menu-button5" class="button button-energized  button-block button-clear icon ion-android-restaurant" data-componentid="button5"></a>
+          <a ui-sref="drinks" menu-close="" id="menu-button6" class="button button-energized  button-block button-clear icon ion-ios-wineglass" data-componentid="button6"></a>
+        </div>
+        <div id="menu-button-bar3" class="button-bar" data-componentid="button-bar3">
+          <div id="menu-button15" class="button button-energized button-small button-clear" data-componentid="button15">Events</div>
+          <div id="menu-button16" class="button button-energized button-small button-clear" data-componentid="button16">Food</div>
+          <div id="menu-button17" class="button button-energized button-small button-clear" data-componentid="button17">Drinks</div>
+        </div>
+        <div id="menu-button-bar2" class="button-bar" data-componentid="button-bar2">
+          <a ui-sref="tabsController.bookingRichiesta" menu-close="" id="menu-button9" class="button button-energized  button-block button-clear icon ion-android-cart" data-componentid="button9"></a>
+          <a ui-sref="feedback" menu-close="" id="menu-button10" class="button button-energized  button-block button-clear icon ion-android-list" data-componentid="button10"></a>
+          <a ui-sref="location" menu-close="" id="menu-button11" class="button button-energized  button-block button-clear icon ion-ios-location" data-componentid="button11"></a>
+        </div>
+        <div id="menu-button-bar5" class="button-bar" data-componentid="button-bar5">
+          <div id="menu-button54" class="button button-energized button-small button-clear" data-componentid="button54">Reserve</div>
+          <div id="menu-button23" class="button button-energized button-small button-clear" data-componentid="button23">Feedback</div>
+          <div id="menu-button24" class="button button-energized button-small button-clear" data-componentid="button24">Location</div>
+        </div>
+        <div id="menu-button-bar12" class="button-bar" data-componentid="button-bar12">
+          <a ui-sref="tabsController.dashboard" menu-close="" id="menu-button41" class="button button-energized  button-block button-clear icon ion-stats-bars" data-componentid="button41"></a>
+          <a ui-sref="settings" menu-close="" id="menu-button42" class="button button-energized  button-block button-clear icon ion-android-settings" data-componentid="button42"></a>
+          <a ui-sref="share" menu-close="" id="menu-button57" class="button button-energized  button-block button-clear icon ion-android-share-alt" data-componentid="button57"></a>
+        </div>
+        <div id="menu-button-bar11" class="button-bar" data-componentid="button-bar11">
+          <div id="menu-button22" class="button button-energized button-small button-clear" data-componentid="button22">Dashboard</div>
+          <div id="menu-button55" class="button button-energized button-small button-clear" data-componentid="button55">Settings</div>
+          <div id="menu-button58" class="button button-energized button-small button-clear" data-componentid="button58">Share</div>
+        </div>
+      </ion-content>
+    </ion-side-menu>
+  </ion-side-menus>
+</div>
+  </body>
+</html>

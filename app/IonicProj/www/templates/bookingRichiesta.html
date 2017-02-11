@@ -1,0 +1,39 @@
+<ion-view title="Booking - Richiesta" id="page6">
+  <ion-nav-buttons side="right" class="has-header">
+    <button class="button button-icon icon ion-android-cart"></button>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="has-header">
+    <form id="bookingRichiesta-form3" class="list">
+      <div id="bookingRichiesta-button-bar7" class="button-bar">
+        <div id="bookingRichiesta-button12" class="button button-energized  button-block button-clear">1</div>
+        <div id="bookingRichiesta-button13" class="button button-stable  button-block button-clear">2</div>
+        <div id="bookingRichiesta-button14" class="button button-stable  button-block button-clear">3</div>
+      </div>
+      <label class="item item-input item-stacked-label" id="bookingRichiesta-input5" name="numero">
+        <span class="input-label">N° persone:</span>
+        <input type="number" placeholder="Inserire numero persone">
+      </label>
+      <label class="item item-input item-stacked-label" id="bookingRichiesta-input6" name="giorno">
+        <span class="input-label">Giorno:</span>
+        <input type="date" placeholder="Specificare giorno prenotazione">
+      </label>
+      <label class="item item-select" id="bookingRichiesta-select3" name="ora">
+        <span class="input-label">Ora:</span>
+        <select>
+          <option>7:00</option>
+          <option>8:00</option>
+          <option>9:00</option>
+        </select>
+      </label>
+      <label class="item item-select" id="bookingRichiesta-select4" name="allergie">
+        <span class="input-label">Allergie/Intolleranze:</span>
+        <select>
+          <option>Nessuna</option>
+          <option>Celichia</option>
+          <option>Favismo</option>
+        </select>
+      </label>
+    </form>
+    <a ui-sref="tabsController.bookingVerifica" id="bookingRichiesta-button21" class="button button-energized  button-block button-outline icon-right ion-android-arrow-forward">Verifica disponibilità</a>
+  </ion-content>
+</ion-view>

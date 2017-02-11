@@ -14,3 +14,9 @@ C:\Users\swolley\Documents\gitrepos\ristorante\ristorante\ristorante\obj\Debug\r
 C:\Users\swolley\Documents\gitrepos\ristorante\ristorante\ristorante\obj\Debug\ristorante.amministrazione.resources
 C:\Users\swolley\Documents\gitrepos\ristorante\ristorante\ristorante\obj\Debug\ristorante.Properties.Resources.resources
 C:\Users\swolley\Documents\gitrepos\ristorante\ristorante\ristorante\obj\Debug\ristorante.csproj.GenerateResource.Cache
+C:\Users\swolley\Documents\gitrepos\ristorante\ristorante\ristorante\bin\Debug\ristorante.exe
+C:\Users\swolley\Documents\gitrepos\ristorante\ristorante\ristorante\bin\Debug\ristorante.pdb
+C:\Users\swolley\Documents\gitrepos\ristorante\ristorante\ristorante\bin\Debug\Dapper.dll
+C:\Users\swolley\Documents\gitrepos\ristorante\ristorante\ristorante\bin\Debug\MySql.Data.dll
+C:\Users\swolley\Documents\gitrepos\ristorante\ristorante\ristorante\bin\Debug\Dapper.xml
+C:\Users\swolley\Documents\gitrepos\ristorante\ristorante\ristorante\bin\Debug\MySql.Data.xml

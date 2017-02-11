@@ -13,6 +13,6 @@ namespace ristorante
         public String nome { get; set; }
         public String mail { get; set; }
         public String telefono { get; set; }
-        public short int punti { get; set; }
+        public short punti { get; set; }
     }
 }

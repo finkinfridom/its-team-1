@@ -13,7 +13,7 @@ namespace ristorante
         public String descrizione { get; set; }
         public bool nel_menu { get; set; }
         public String nome_cat { get; set; }
-        public short int giacenza { get; set; }
+        public short giacenza { get; set; }
         public float prezzo { get; set; }
         public bool featured { get; set; }
     }

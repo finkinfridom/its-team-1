@@ -19,17 +19,22 @@ namespace ristorante
 
         private void amministrazione_Load(object sender, TabControlEventArgs e)
         {
-            String result = new Array();
-            result[] = Program.GetAllCategory;
-            foreach (result[] as tab)
+            //contenuto tab Categorie
+            elencoCat.DataSource = Program.GetAllCategory();
+
+            //subTab del tab prodotti
+            List<Categoria> result = new List<Categoria>();
+            result = Program.GetAllCategory(); 
+            foreach (Categoria value in result)
             {
-                TabPage tp = new TabPage(tab);      //crea schede in base ad estrazione da db
-                menu.TabPages.Add(tp); 
+            TabPage tp = new TabPage(value.ToString());      //crea schede in base ad estrazione da db
+            subMenuProd.TabPages.Add(tp);
             }
-            
-            Categoria obj = menu.SelectedTab as Categorie;
+
+            //contenuti subtabs
+            /*Categoria obj = menu.SelectedTab as Categorie;
             if (obj != null)
-                dataGridView1.DataSource = Program.GetProductByCategory(obj.nome_cat);
+                elencoCat.DataSource = Program.GetProductByCategory(obj.nome_cat);*/
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

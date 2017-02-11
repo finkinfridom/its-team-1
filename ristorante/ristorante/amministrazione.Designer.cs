@@ -34,17 +34,17 @@
             this.tavoli = new System.Windows.Forms.TabPage();
             this.clienti = new System.Windows.Forms.TabPage();
             this.prodotti = new System.Windows.Forms.TabPage();
-            this.submenu1 = new System.Windows.Forms.TabControl();
+            this.subMenuProd = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.categorie = new System.Windows.Forms.TabPage();
+            this.elencoCat = new System.Windows.Forms.DataGridView();
             this.menu = new System.Windows.Forms.TabControl();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.prodotti.SuspendLayout();
-            this.submenu1.SuspendLayout();
+            this.subMenuProd.SuspendLayout();
             this.categorie.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.elencoCat)).BeginInit();
             this.menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // prenotazioni
@@ -94,7 +94,7 @@
             // 
             // prodotti
             // 
-            this.prodotti.Controls.Add(this.submenu1);
+            this.prodotti.Controls.Add(this.subMenuProd);
             this.prodotti.Location = new System.Drawing.Point(4, 22);
             this.prodotti.Name = "prodotti";
             this.prodotti.Padding = new System.Windows.Forms.Padding(3);
@@ -103,15 +103,15 @@
             this.prodotti.Text = "Prodotti";
             this.prodotti.UseVisualStyleBackColor = true;
             // 
-            // submenu1
+            // subMenuProd
             // 
-            this.submenu1.Controls.Add(this.tabPage1);
-            this.submenu1.Controls.Add(this.tabPage2);
-            this.submenu1.Location = new System.Drawing.Point(9, 6);
-            this.submenu1.Name = "submenu1";
-            this.submenu1.SelectedIndex = 0;
-            this.submenu1.Size = new System.Drawing.Size(902, 281);
-            this.submenu1.TabIndex = 0;
+            this.subMenuProd.Controls.Add(this.tabPage1);
+            this.subMenuProd.Controls.Add(this.tabPage2);
+            this.subMenuProd.Location = new System.Drawing.Point(9, 6);
+            this.subMenuProd.Name = "subMenuProd";
+            this.subMenuProd.SelectedIndex = 0;
+            this.subMenuProd.Size = new System.Drawing.Size(902, 281);
+            this.subMenuProd.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -135,7 +135,7 @@
             // 
             // categorie
             // 
-            this.categorie.Controls.Add(this.dataGridView1);
+            this.categorie.Controls.Add(this.elencoCat);
             this.categorie.Location = new System.Drawing.Point(4, 22);
             this.categorie.Name = "categorie";
             this.categorie.Padding = new System.Windows.Forms.Padding(3);
@@ -143,6 +143,15 @@
             this.categorie.TabIndex = 0;
             this.categorie.Text = "Categorie";
             this.categorie.UseVisualStyleBackColor = true;
+            // 
+            // elencoCat
+            // 
+            this.elencoCat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.elencoCat.Location = new System.Drawing.Point(3, 3);
+            this.elencoCat.Name = "elencoCat";
+            this.elencoCat.Size = new System.Drawing.Size(240, 150);
+            this.elencoCat.TabIndex = 0;
+            this.elencoCat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // menu
             // 
@@ -159,15 +168,6 @@
             this.menu.Size = new System.Drawing.Size(927, 321);
             this.menu.TabIndex = 3;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
             // amministrazione
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -178,10 +178,10 @@
             this.Name = "amministrazione";
             this.Text = "Amministratione / Gestione contenuti";
             this.prodotti.ResumeLayout(false);
-            this.submenu1.ResumeLayout(false);
+            this.subMenuProd.ResumeLayout(false);
             this.categorie.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.elencoCat)).EndInit();
             this.menu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -194,12 +194,12 @@
         private System.Windows.Forms.TabPage tavoli;
         private System.Windows.Forms.TabPage clienti;
         private System.Windows.Forms.TabPage prodotti;
-        private System.Windows.Forms.TabControl submenu1;
+        private System.Windows.Forms.TabControl subMenuProd;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage categorie;
         private System.Windows.Forms.TabControl menu;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView elencoCat;
     }
 }
 

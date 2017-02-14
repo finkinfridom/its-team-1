@@ -48,11 +48,23 @@ $result->close();
         <link href="css/font-awesome.min.css" rel="stylesheet">
         <link rel="icon" href="favicon-1.ico" type="image/x-icon">
         <!-- google api -->
-        <script type="text/javascript" src="goapp/go.js"></script>
+        <script type="text/javascript" src="js/go.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" ></script>
+        <!-- facebook api -->
+        <script type="text/javascript" src="js/fb.js"></script>
     </head>
 
     <body>
+        <!-- fb -->
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v2.8&appId=1258745227549171";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        <!-- fb fine -->
 
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">

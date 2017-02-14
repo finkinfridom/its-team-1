@@ -48,11 +48,16 @@
                                     <?php
                                     }
                                     else
-                                    {       //login con google/facebook api
+                                    {       
+                                        //spi logins
                                         echo "<p class='right-text'>Fai il login con il tuo account Google o Facebook.<br>
                                                 Prenotando online potrai accumulare punti e accedere a sconti alla cassa.</p><br/>";
+                                        //GOOGLE
                                         include "goapp/index.html";
-                                        //include "fbapp/fblogin.php";
+                                        //FACEBOOK
+                                        ?>
+                                        <div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="true"></div>
+                                        <?php
                                         echo "<br/>";
                                         echo "<p>Oppure ordina con consegna a domicilio tramite Foodora</p><br/>
                                               <p class='right-text'><img src='images/foodora_btn_it.png' height=52px/></p><br/>";

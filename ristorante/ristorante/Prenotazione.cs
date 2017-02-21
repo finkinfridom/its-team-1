@@ -13,6 +13,6 @@ namespace ristorante
         public DateTime giorno { get; set; }
         public DateTime ora { get; set; }
         public short num_persone { get; set; }
-        public int cod_cliente { get; set; }
+        public Clienti cod_cliente { get; set; }
     }
 }

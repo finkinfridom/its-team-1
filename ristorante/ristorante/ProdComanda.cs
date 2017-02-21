@@ -8,8 +8,8 @@ namespace ristorante
 {
     public class ProdComanda
     {
-        public int num_comanda { get; set; }
-        public int num_prodotto { get; set; }
+        public Comanda num_comanda { get; set; }
+        public Prodotti num_prodotto { get; set; }
         public StatoPiatto stato { get; set; }
     }
 }

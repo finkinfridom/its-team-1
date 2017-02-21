@@ -8,6 +8,6 @@ namespace ristorante
 {
     public class Categoria
     {
-        public String nome_cat { get; set; }
+        public string nome_cat { get; set; }
     }
 }

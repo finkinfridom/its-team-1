@@ -9,10 +9,10 @@ namespace ristorante
     public class Prodotti
     {
         public int cod_prodotto { get; set; }
-        public String nome_prod { get; set; }
-        public String descrizione { get; set; }
+        public string nome_prod { get; set; }
+        public string descrizione { get; set; }
         public bool nel_menu { get; set; }
-        public String nome_cat { get; set; }
+        public Categoria nome_cat { get; set; }
         public short giacenza { get; set; }
         public float prezzo { get; set; }
         public bool featured { get; set; }

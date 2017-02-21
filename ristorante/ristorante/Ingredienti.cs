@@ -8,8 +8,9 @@ namespace ristorante
 {
     public class Ingredienti
     {
-        public String nome_ingr { get; set; }
-        public String descrizione { get; set; }
+        public string nome_ingr { get; set; }
+        public string descrizione { get; set; }
+        public string allergeni { get; set; } //o prenderlo da un enum/tabella?
         public bool esaurito { get; set; }
     }
 }

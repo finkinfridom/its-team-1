@@ -17,43 +17,56 @@
                                 <div class="row">
                                 
                                     <?php
-                                    $connessione=false;             //temporaneo per test
-                                    $nome="Ciccio Pasticcio";   //temporaneo per test
-                                    if($connessione==true)     //da rivedere cosa andrà qua dentro $connessione per ora non esiste
+                                    if(isset($_SESSION['facebook_access_token']))
                                     {
-                                        echo "<p class='right-text'>".ucfirst($nome).", prenota il tuo tavolo in pochissimi passaggi.</p>";
-                                    ?> 
+                                    ?>
+                                        <div class="col-lg-6 col-md-6 col-xs-6">                                        
+                                            <?php echo "<input type='text' name='first_name' id='first_name' required='required' class='form' placeholder='First Name' value='".$nome."' readonly />
+                                            <input type='text' name='last_name' id='last_name' required='required' class='form' placeholder='Last Name' value='".$cognome."' readonly />"; ?>
+                                            <input type="text" name="guest" id="guest" required="required" class="form" placeholder="Inserire numero di persone" />
+                                            <input type="date" name="datepicker" id="datepicker" required="required" class="form"/>
+                                            <!--<input type="text" name="hour" id="hour" required="required" class="form" placeholder="hh:mm" />-->
+                                        </div>
 
-                                    <div class="col-lg-6 col-md-6 col-xs-6">
-                                        <!-- Name -->
-                                        <input type="text" name="first_name" id="first_name" required="required" class="form" placeholder="First Name" />
-                                        <input type="text" name="last_name" id="last_name" required="required" class="form" placeholder="Last Name" />
-                                        <input type="text" name="state" id="state" required="required" class="form" placeholder="State" />
-                                        <input type="text" name="datepicker" id="datepicker" required="required" class="form" placeholder="Reservation Date" />
-                                    </div>
+                                        <div class="col-lg-6 col-md-6 col-xs-6">
+                                            <input type="text" name="phone" id="phone" required="required" class="form" placeholder="Inserire numero di telefono" />
+                                            <select name="hour" id="hour" class="form">
+                                            <?php
+                                              $sql = "SELECT orari
+                                                      FROM orari
+                                                      JOIN prenotazioni
+                                                      ON prenotazioni.id_ora=orari.id_ora
+                                                      JOIN tavolo
+                                                      ON tavolo.num_tavolo=prenotazioni.num_tavolo";
+                                              $result = $conn->query($sql);
 
-                                    <div class="col-lg-6 col-md-6 col-xs-6">
-                                        <!-- Name -->
-                                        <input type="text" name="phone" id="phone" required="required" class="form" placeholder="Phone" />
-                                        <input type="text" name="guest" id="guest" required="required" class="form" placeholder="Guest Number" />
-                                        <input type="email" name="email" id="email" required="required" class="form" placeholder="Email" />
-                                        <input type="text" name="subject" id="subject" required="required" class="form" placeholder="Subject" />
-                                    </div>
+                                              if ($result->num_rows > 0)
+                                              while ($row = $result->fetch_assoc())
+                                              {
+                                                echo "<option value='".$row['id_orari']."'>".$row['ora']."</option>";
+                                              }
+                                              $result->close();
+                                            ?>
+                                            </select>
+                                            <?php
+                                            echo "<input type='email' name='email' id='email' required='required' class='form' placeholder='Email' value=".$mail." readonly />";
+                                            ?>
+                                            <!-- <input type="text" name="subject" id="subject" required="required" class="form" placeholder="Subject" /> -->
+                                        </div>
 
-                                    <div class="col-xs-6 ">
-                                        <!-- Send Button -->
-                                        <button type="submit" id="submit" name="submit" class="text-center form-btn form-btn">Reserve</button> 
-                                    </div>
-                                
+                                        <div class="col-xs-6 ">
+                                            <!-- Send Button -->
+                                            <button type="submit" id="submit" name="submit" class="text-center form-btn form-btn">Reserve</button> 
+                                        </div>
                                     <?php
                                     }
                                     else
-                                    {       //login con google/facebook api
+                                    {
                                         echo "<p class='right-text'>Fai il login con il tuo account Google o Facebook.<br>
-                                                Prenotando online potrai accumulare punti e accedere a sconti alla cassa.</p><br/>";
-                                        include "goapp/index.html";
-                                        //include "fbapp/fblogin.php";
-                                        echo "<br/>";
+                                            Prenotando online potrai accumulare punti e accedere a sconti alla cassa.</p><br/>";
+
+                                        include "vendor/fblogin.php";
+                                        echo "<br/><br/>";
                                         echo "<p>Oppure ordina con consegna a domicilio tramite Foodora</p><br/>
                                               <p class='right-text'><img src='images/foodora_btn_it.png' height=52px/></p><br/>";
                                         echo "<p class='right-text'>Non hai un account Google o Facebook?<br/>

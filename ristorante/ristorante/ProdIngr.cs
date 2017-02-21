@@ -8,7 +8,7 @@ namespace ristorante
 {
     public class ProdIngr
     {
-        public String nome_ingr { get; set; }
-        public int cod_prodotto { get; set; }
+        public Ingredienti nome_ingr { get; set; }
+        public Prodotti cod_prodotto { get; set; }
     }
 }

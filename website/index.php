@@ -1,5 +1,6 @@
 <?php
-include "dbConfig.php";
+require __DIR__ . '/vendor/autoload.php';
+include "config.php";
 
 //recupero i dati del ristorante
 $sql = "SELECT *
@@ -47,9 +48,6 @@ $result->close();
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/font-awesome.min.css" rel="stylesheet">
         <link rel="icon" href="favicon-1.ico" type="image/x-icon">
-        <!-- google api -->
-        <script type="text/javascript" src="goapp/go.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" ></script>
     </head>
 
     <body>
@@ -108,17 +106,11 @@ $result->close();
 
         include "about.php";
 
-
-
-
 //       <!-- ============ Pricing  ============= -->
 
-
         include "pricing.php";
-
 /*
 //        <!-- ============ Our Beer  ============= -->
-
 
         <section id ="beer" class="description_content">
             <div  class="beer background_content">
@@ -139,9 +131,7 @@ $result->close();
             </div>
         </section>
 
-
        <!-- ============ Our Bread  ============= -->
-
 
         <section id="bread" class=" description_content">
             <div  class="bread background_content">
@@ -160,7 +150,6 @@ $result->close();
             </div>
         </section>
 */
-        
 //        <!-- ============ Featured Dish  ============= -->
 
         if($attiva_feat==1)
@@ -173,7 +162,6 @@ $result->close();
 //        <!-- ============ Contact Section  ============= -->
 
         include "contact.php";
-
 ?>
         <!-- ============ Footer Section  ============= -->
 
@@ -192,7 +180,7 @@ $result->close();
         <script type="text/javascript" src="js/jquery.mixitup.min.js" ></script>
         <script type="text/javascript" src="js/main.js" ></script>
 
-<?php //mysqli_close($conn); 
+<?php
 $conn->close();?>
 
     </body>

@@ -9,10 +9,10 @@ namespace ristorante
     public class Clienti
     {
         public int cod_cliente { get; set; }
-        public String cognome { get; set; }
-        public String nome { get; set; }
-        public String mail { get; set; }
-        public String telefono { get; set; }
+        public string cognome { get; set; }
+        public string nome { get; set; }
+        public string mail { get; set; }
+        public string telefono { get; set; }
         public short punti { get; set; }
     }
 }

@@ -9,7 +9,7 @@ namespace ristorante
     public class Spese
     {
         public int cod_spesa { get; set; }
-        public String nome_spesa { get; set; }
+        public string nome_spesa { get; set; }
         public bool moltiplicatore { get; set; }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace ristorante
 {
@@ -32,12 +33,17 @@ namespace ristorante
             }
 
             //contenuti subtabs
-            /*Categoria obj = menu.SelectedTab as Categorie;
+            Categoria obj = menu.SelectedTab as Categorie;
             if (obj != null)
-                elencoCat.DataSource = Program.GetProductByCategory(obj.nome_cat);*/
+                elencoCat.DataSource = Program.GetProductByCategory(obj.nome_cat);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
         }

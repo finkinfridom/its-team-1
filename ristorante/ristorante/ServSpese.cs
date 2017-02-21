@@ -10,5 +10,6 @@ namespace ristorante
     {
         public int cod_spesa { get; set; }
         public DateTime giorno_ora { get; set; }
+        public Spese cod_spese { get; set; }
     }
 }

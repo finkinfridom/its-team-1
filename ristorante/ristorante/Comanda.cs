@@ -10,5 +10,6 @@ namespace ristorante
     {
         public int num_comanda { get; set; }
         public DateTime giorno_ora { get; set; }
+        public Servizio cod_servizio { get; set; }
     }
 }

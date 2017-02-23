@@ -16,40 +16,53 @@
                             <div class="col-lg-8 col-md-6 col-xs-12">
                                 <div class="row">
                                 
+                                    <script>
+                                        function sendData(){
+                                            var guest = jQuery('.guest').val();
+                                            var datapicker = jQuery('.datapicker').val();
+                                            jQuery.ajax({
+                                                type: 'POST',
+                                                url: 'ajax_orari.php',
+                                                data: {
+                                                    'guest': guest,
+                                                    'datapicker': datapicker
+                                                },
+                                                success: function( data )
+                                                {
+                                                    var orari=$.parseJSON(data);
+                                                    $.each(opts, function(i, d)
+                                                    {
+                                                        $('#hour').append('<option value="' + d.id_orari + '">' + d.ora + '</option>');
+                                                    }
+                                                }
+                                            });
+                                        }
+                                    </script>
                                     <?php
-                                    if(isset($_SESSION['facebook_access_token']))
+
+                                    //if(isset($_SESSION['facebook_access_token']))
+                                    $nome='marco';
+                                    $cognome='marchi';
+                                    $mail='pappapia@pappapia.it';
+                                    if(true)
                                     {
                                     ?>
-                                        <div class="col-lg-6 col-md-6 col-xs-6">                                        
-                                            <?php echo "<input type='text' name='first_name' id='first_name' required='required' class='form' placeholder='First Name' value='".$nome."' readonly />
-                                            <input type='text' name='last_name' id='last_name' required='required' class='form' placeholder='Last Name' value='".$cognome."' readonly />"; ?>
-                                            <input type="text" name="guest" id="guest" required="required" class="form" placeholder="Inserire numero di persone" />
-                                            <input type="date" name="datepicker" id="datepicker" required="required" class="form"/>
+                                        <div class="col-lg-6 col-md-6 col-xs-6">
+                                            <div><?php echo $nome; ?>, prenota in un attimo il tuo tavolo</div>                                        
+                                            <!-- <input type='text' name='first_name' id='first_name' required='required' class='form' placeholder='First Name' value='".$nome."' readonly />
+                                            <input type='text' name='last_name' id='last_name' required='required' class='form' placeholder='Last Name' value='".$cognome."' readonly />-->
+                                            <input type='number' name='guest' id='guest' required='required' class='form' placeholder='Inserire numero di persone' min='1' max='25' onchange="sendData()" />
+                                            <input type='date' name='datepicker' id='datepicker' required='required' class='form' min='<?php echo date('Y-m-d'); ?>' value='<?php echo date('Y-m-d'); ?>' onchange="sendData()"/>
                                             <!--<input type="text" name="hour" id="hour" required="required" class="form" placeholder="hh:mm" />-->
                                         </div>
 
                                         <div class="col-lg-6 col-md-6 col-xs-6">
                                             <input type="text" name="phone" id="phone" required="required" class="form" placeholder="Inserire numero di telefono" />
                                             <select name="hour" id="hour" class="form">
-                                            <?php
-                                              $sql = "SELECT orari
-                                                      FROM orari
-                                                      JOIN prenotazioni
-                                                      ON prenotazioni.id_ora=orari.id_ora
-                                                      JOIN tavolo
-                                                      ON tavolo.num_tavolo=prenotazioni.num_tavolo";
-                                              $result = $conn->query($sql);
-
-                                              if ($result->num_rows > 0)
-                                              while ($row = $result->fetch_assoc())
-                                              {
-                                                echo "<option value='".$row['id_orari']."'>".$row['ora']."</option>";
-                                              }
-                                              $result->close();
-                                            ?>
+                                            
                                             </select>
                                             <?php
-                                            echo "<input type='email' name='email' id='email' required='required' class='form' placeholder='Email' value=".$mail." readonly />";
+                                            echo "<input type='email' name='email' id='email' required='required' class='form' placeholder='Inserire un\'email valida'  value=".$mail." readonly />";
                                             ?>
                                             <!-- <input type="text" name="subject" id="subject" required="required" class="form" placeholder="Subject" /> -->
                                         </div>

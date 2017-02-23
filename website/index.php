@@ -181,7 +181,8 @@ $result->close();
         <script type="text/javascript" src="js/main.js" ></script>
 
 <?php
-$conn->close();?>
+$conn->close();
+?>
 
     </body>
 </html>

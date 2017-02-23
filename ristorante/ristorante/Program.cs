@@ -26,34 +26,19 @@ namespace ristorante
 
         public static List<Categoria> GetAllCategory()
         {
-            using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["ristorante_db4free"].ConnectionString))
+            using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["locale"].ConnectionString))
             {
-                /*try
-                {
-                    conn.Open();
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }*/
                 if (conn.State == System.Data.ConnectionState.Closed)
                     conn.Open();
                 return conn.Query<Categoria>("SELECT nome_cat FROM categoria ORDER BY nome_cat").ToList();
+                //conn.Close();
             }
         }
 
         public static List<Prodotti> GetProductByCategory(String categoria)
         {
-            using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["ristorante_db4free"].ConnectionString))
+            using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["locale"].ConnectionString))
             {
-                /*try
-                {
-                    conn.Open();
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }*/
                 if (conn.State == System.Data.ConnectionState.Closed)
                     conn.Open();
                 return conn.Query<Prodotti>("SELECT * FROM rodotti WHERE " + categoria + " ORDER BY nome_cat").ToList();

@@ -25,7 +25,7 @@ namespace ristorante
 
             //subTab del tab prodotti
             List<Categoria> result = new List<Categoria>();
-            result = Program.GetAllCategory(); 
+            result = Program.GetAllCategory();
             foreach (Categoria value in result)
             {
             TabPage tp = new TabPage(value.ToString());      //crea schede in base ad estrazione da db
@@ -44,6 +44,11 @@ namespace ristorante
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void categoriaBindingSource_CurrentChanged(object sender, EventArgs e)
         {
 
         }

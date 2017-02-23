@@ -8,7 +8,8 @@ namespace ristorante
 {
     public class Clienti
     {
-        public int cod_cliente { get; set; }
+        public int codCliente { get; set; }
+        public oauthProvider provider { get; set; }
         public string cognome { get; set; }
         public string nome { get; set; }
         public string mail { get; set; }

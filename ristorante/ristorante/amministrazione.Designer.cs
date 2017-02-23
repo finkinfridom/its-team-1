@@ -29,45 +29,79 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.prodottiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.menu = new System.Windows.Forms.TabControl();
+            this.categoriaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.categoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new ristorante.DataSet1();
             this.prenotazioni = new System.Windows.Forms.TabPage();
             this.comande = new System.Windows.Forms.TabPage();
             this.servizi = new System.Windows.Forms.TabPage();
             this.tavoli = new System.Windows.Forms.TabPage();
             this.clienti = new System.Windows.Forms.TabPage();
-            this.prodotti = new System.Windows.Forms.TabPage();
-            this.prodDel = new System.Windows.Forms.Button();
-            this.prodNew = new System.Windows.Forms.Button();
-            this.prodMod = new System.Windows.Forms.Button();
             this.subMenuProd = new System.Windows.Forms.TabControl();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.codprodottoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeprodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descrizioneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nelmenuDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.nomecatDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giacenzaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prezzoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.featuredDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.prodottiBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.categorie = new System.Windows.Forms.TabPage();
+            this.prezzoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giacenzaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomecatDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nelmenuDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.descrizioneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeprodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codprodottoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prodMod = new System.Windows.Forms.Button();
+            this.prodNew = new System.Windows.Forms.Button();
+            this.prodDel = new System.Windows.Forms.Button();
+            this.prodotti = new System.Windows.Forms.TabPage();
             this.elencoCat = new System.Windows.Forms.DataGridView();
             this.nomecatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.menu = new System.Windows.Forms.TabControl();
-            this.categoriaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.prodotti.SuspendLayout();
-            this.subMenuProd.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.categorie = new System.Windows.Forms.TabPage();
+            this.nomecatDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.prodottiBindingSource)).BeginInit();
-            this.categorie.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.elencoCat)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).BeginInit();
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.prodotti.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.elencoCat)).BeginInit();
+            this.categorie.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // prodottiBindingSource
+            // 
+            this.prodottiBindingSource.DataSource = typeof(ristorante.Prodotti);
+            // 
+            // menu
+            // 
+            this.menu.Controls.Add(this.categorie);
+            this.menu.Controls.Add(this.prodotti);
+            this.menu.Controls.Add(this.clienti);
+            this.menu.Controls.Add(this.tavoli);
+            this.menu.Controls.Add(this.servizi);
+            this.menu.Controls.Add(this.comande);
+            this.menu.Controls.Add(this.prenotazioni);
+            this.menu.Location = new System.Drawing.Point(-1, 0);
+            this.menu.Name = "menu";
+            this.menu.SelectedIndex = 0;
+            this.menu.Size = new System.Drawing.Size(927, 321);
+            this.menu.TabIndex = 3;
+            // 
+            // categoriaBindingSource1
+            // 
+            this.categoriaBindingSource1.DataSource = typeof(ristorante.Categoria);
+            // 
+            // categoriaBindingSource
+            // 
+            this.categoriaBindingSource.DataSource = typeof(ristorante.Categoria);
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // prenotazioni
             // 
@@ -114,6 +148,121 @@
             this.clienti.Text = "Clienti";
             this.clienti.UseVisualStyleBackColor = true;
             // 
+            // subMenuProd
+            // 
+            this.subMenuProd.Location = new System.Drawing.Point(9, 6);
+            this.subMenuProd.Name = "subMenuProd";
+            this.subMenuProd.SelectedIndex = 0;
+            this.subMenuProd.Size = new System.Drawing.Size(732, 281);
+            this.subMenuProd.TabIndex = 0;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(724, 255);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(724, 255);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.DataSource = this.prodottiBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(4, 6);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(800, 242);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            // 
+            // featuredDataGridViewCheckBoxColumn
+            // 
+            this.featuredDataGridViewCheckBoxColumn.DataPropertyName = "featured";
+            this.featuredDataGridViewCheckBoxColumn.HeaderText = "featured";
+            this.featuredDataGridViewCheckBoxColumn.Name = "featuredDataGridViewCheckBoxColumn";
+            // 
+            // prezzoDataGridViewTextBoxColumn
+            // 
+            this.prezzoDataGridViewTextBoxColumn.DataPropertyName = "prezzo";
+            this.prezzoDataGridViewTextBoxColumn.HeaderText = "prezzo";
+            this.prezzoDataGridViewTextBoxColumn.Name = "prezzoDataGridViewTextBoxColumn";
+            // 
+            // giacenzaDataGridViewTextBoxColumn
+            // 
+            this.giacenzaDataGridViewTextBoxColumn.DataPropertyName = "giacenza";
+            this.giacenzaDataGridViewTextBoxColumn.HeaderText = "giacenza";
+            this.giacenzaDataGridViewTextBoxColumn.Name = "giacenzaDataGridViewTextBoxColumn";
+            // 
+            // nomecatDataGridViewTextBoxColumn1
+            // 
+            this.nomecatDataGridViewTextBoxColumn1.DataPropertyName = "nome_cat";
+            this.nomecatDataGridViewTextBoxColumn1.HeaderText = "nome_cat";
+            this.nomecatDataGridViewTextBoxColumn1.Name = "nomecatDataGridViewTextBoxColumn1";
+            // 
+            // nelmenuDataGridViewCheckBoxColumn
+            // 
+            this.nelmenuDataGridViewCheckBoxColumn.DataPropertyName = "nel_menu";
+            this.nelmenuDataGridViewCheckBoxColumn.HeaderText = "nel_menu";
+            this.nelmenuDataGridViewCheckBoxColumn.Name = "nelmenuDataGridViewCheckBoxColumn";
+            // 
+            // descrizioneDataGridViewTextBoxColumn
+            // 
+            this.descrizioneDataGridViewTextBoxColumn.DataPropertyName = "descrizione";
+            this.descrizioneDataGridViewTextBoxColumn.HeaderText = "descrizione";
+            this.descrizioneDataGridViewTextBoxColumn.Name = "descrizioneDataGridViewTextBoxColumn";
+            // 
+            // nomeprodDataGridViewTextBoxColumn
+            // 
+            this.nomeprodDataGridViewTextBoxColumn.DataPropertyName = "nome_prod";
+            this.nomeprodDataGridViewTextBoxColumn.HeaderText = "nome_prod";
+            this.nomeprodDataGridViewTextBoxColumn.Name = "nomeprodDataGridViewTextBoxColumn";
+            // 
+            // codprodottoDataGridViewTextBoxColumn
+            // 
+            this.codprodottoDataGridViewTextBoxColumn.DataPropertyName = "cod_prodotto";
+            this.codprodottoDataGridViewTextBoxColumn.HeaderText = "cod_prodotto";
+            this.codprodottoDataGridViewTextBoxColumn.Name = "codprodottoDataGridViewTextBoxColumn";
+            // 
+            // prodMod
+            // 
+            this.prodMod.Location = new System.Drawing.Point(748, 57);
+            this.prodMod.Name = "prodMod";
+            this.prodMod.Size = new System.Drawing.Size(75, 23);
+            this.prodMod.TabIndex = 1;
+            this.prodMod.Text = "Modifica";
+            this.prodMod.UseVisualStyleBackColor = true;
+            // 
+            // prodNew
+            // 
+            this.prodNew.Location = new System.Drawing.Point(748, 28);
+            this.prodNew.Name = "prodNew";
+            this.prodNew.Size = new System.Drawing.Size(75, 23);
+            this.prodNew.TabIndex = 2;
+            this.prodNew.Text = "Nuovo";
+            this.prodNew.UseVisualStyleBackColor = true;
+            // 
+            // prodDel
+            // 
+            this.prodDel.Location = new System.Drawing.Point(748, 86);
+            this.prodDel.Name = "prodDel";
+            this.prodDel.Size = new System.Drawing.Size(75, 23);
+            this.prodDel.TabIndex = 3;
+            this.prodDel.Text = "Cancella";
+            this.prodDel.UseVisualStyleBackColor = true;
+            // 
             // prodotti
             // 
             this.prodotti.Controls.Add(this.prodDel);
@@ -128,154 +277,12 @@
             this.prodotti.Text = "Prodotti";
             this.prodotti.UseVisualStyleBackColor = true;
             // 
-            // prodDel
-            // 
-            this.prodDel.Location = new System.Drawing.Point(748, 86);
-            this.prodDel.Name = "prodDel";
-            this.prodDel.Size = new System.Drawing.Size(75, 23);
-            this.prodDel.TabIndex = 3;
-            this.prodDel.Text = "Cancella";
-            this.prodDel.UseVisualStyleBackColor = true;
-            // 
-            // prodNew
-            // 
-            this.prodNew.Location = new System.Drawing.Point(748, 28);
-            this.prodNew.Name = "prodNew";
-            this.prodNew.Size = new System.Drawing.Size(75, 23);
-            this.prodNew.TabIndex = 2;
-            this.prodNew.Text = "Nuovo";
-            this.prodNew.UseVisualStyleBackColor = true;
-            // 
-            // prodMod
-            // 
-            this.prodMod.Location = new System.Drawing.Point(748, 57);
-            this.prodMod.Name = "prodMod";
-            this.prodMod.Size = new System.Drawing.Size(75, 23);
-            this.prodMod.TabIndex = 1;
-            this.prodMod.Text = "Modifica";
-            this.prodMod.UseVisualStyleBackColor = true;
-            // 
-            // subMenuProd
-            // 
-            this.subMenuProd.Controls.Add(this.tabPage1);
-            this.subMenuProd.Controls.Add(this.tabPage2);
-            this.subMenuProd.Location = new System.Drawing.Point(9, 6);
-            this.subMenuProd.Name = "subMenuProd";
-            this.subMenuProd.SelectedIndex = 0;
-            this.subMenuProd.Size = new System.Drawing.Size(732, 281);
-            this.subMenuProd.TabIndex = 0;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.dataGridView1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(724, 255);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codprodottoDataGridViewTextBoxColumn,
-            this.nomeprodDataGridViewTextBoxColumn,
-            this.descrizioneDataGridViewTextBoxColumn,
-            this.nelmenuDataGridViewCheckBoxColumn,
-            this.nomecatDataGridViewTextBoxColumn1,
-            this.giacenzaDataGridViewTextBoxColumn,
-            this.prezzoDataGridViewTextBoxColumn,
-            this.featuredDataGridViewCheckBoxColumn});
-            this.dataGridView1.DataSource = this.prodottiBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 6);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(800, 242);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
-            // 
-            // codprodottoDataGridViewTextBoxColumn
-            // 
-            this.codprodottoDataGridViewTextBoxColumn.DataPropertyName = "cod_prodotto";
-            this.codprodottoDataGridViewTextBoxColumn.HeaderText = "cod_prodotto";
-            this.codprodottoDataGridViewTextBoxColumn.Name = "codprodottoDataGridViewTextBoxColumn";
-            // 
-            // nomeprodDataGridViewTextBoxColumn
-            // 
-            this.nomeprodDataGridViewTextBoxColumn.DataPropertyName = "nome_prod";
-            this.nomeprodDataGridViewTextBoxColumn.HeaderText = "nome_prod";
-            this.nomeprodDataGridViewTextBoxColumn.Name = "nomeprodDataGridViewTextBoxColumn";
-            // 
-            // descrizioneDataGridViewTextBoxColumn
-            // 
-            this.descrizioneDataGridViewTextBoxColumn.DataPropertyName = "descrizione";
-            this.descrizioneDataGridViewTextBoxColumn.HeaderText = "descrizione";
-            this.descrizioneDataGridViewTextBoxColumn.Name = "descrizioneDataGridViewTextBoxColumn";
-            // 
-            // nelmenuDataGridViewCheckBoxColumn
-            // 
-            this.nelmenuDataGridViewCheckBoxColumn.DataPropertyName = "nel_menu";
-            this.nelmenuDataGridViewCheckBoxColumn.HeaderText = "nel_menu";
-            this.nelmenuDataGridViewCheckBoxColumn.Name = "nelmenuDataGridViewCheckBoxColumn";
-            // 
-            // nomecatDataGridViewTextBoxColumn1
-            // 
-            this.nomecatDataGridViewTextBoxColumn1.DataPropertyName = "nome_cat";
-            this.nomecatDataGridViewTextBoxColumn1.HeaderText = "nome_cat";
-            this.nomecatDataGridViewTextBoxColumn1.Name = "nomecatDataGridViewTextBoxColumn1";
-            // 
-            // giacenzaDataGridViewTextBoxColumn
-            // 
-            this.giacenzaDataGridViewTextBoxColumn.DataPropertyName = "giacenza";
-            this.giacenzaDataGridViewTextBoxColumn.HeaderText = "giacenza";
-            this.giacenzaDataGridViewTextBoxColumn.Name = "giacenzaDataGridViewTextBoxColumn";
-            // 
-            // prezzoDataGridViewTextBoxColumn
-            // 
-            this.prezzoDataGridViewTextBoxColumn.DataPropertyName = "prezzo";
-            this.prezzoDataGridViewTextBoxColumn.HeaderText = "prezzo";
-            this.prezzoDataGridViewTextBoxColumn.Name = "prezzoDataGridViewTextBoxColumn";
-            // 
-            // featuredDataGridViewCheckBoxColumn
-            // 
-            this.featuredDataGridViewCheckBoxColumn.DataPropertyName = "featured";
-            this.featuredDataGridViewCheckBoxColumn.HeaderText = "featured";
-            this.featuredDataGridViewCheckBoxColumn.Name = "featuredDataGridViewCheckBoxColumn";
-            // 
-            // prodottiBindingSource
-            // 
-            this.prodottiBindingSource.DataSource = typeof(ristorante.Prodotti);
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(724, 255);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // categorie
-            // 
-            this.categorie.Controls.Add(this.elencoCat);
-            this.categorie.Location = new System.Drawing.Point(4, 22);
-            this.categorie.Name = "categorie";
-            this.categorie.Padding = new System.Windows.Forms.Padding(3);
-            this.categorie.Size = new System.Drawing.Size(919, 295);
-            this.categorie.TabIndex = 0;
-            this.categorie.Text = "Categorie";
-            this.categorie.UseVisualStyleBackColor = true;
-            // 
             // elencoCat
             // 
             this.elencoCat.AutoGenerateColumns = false;
             this.elencoCat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.elencoCat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nomecatDataGridViewTextBoxColumn});
+            this.nomecatDataGridViewTextBoxColumn2});
             this.elencoCat.DataSource = this.categoriaBindingSource;
             this.elencoCat.Location = new System.Drawing.Point(0, 1);
             this.elencoCat.Name = "elencoCat";
@@ -289,28 +296,31 @@
             this.nomecatDataGridViewTextBoxColumn.HeaderText = "nome_cat";
             this.nomecatDataGridViewTextBoxColumn.Name = "nomecatDataGridViewTextBoxColumn";
             // 
-            // categoriaBindingSource
+            // label1
             // 
-            this.categoriaBindingSource.DataSource = typeof(ristorante.Categoria);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(369, 58);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 1;
             // 
-            // menu
+            // categorie
             // 
-            this.menu.Controls.Add(this.categorie);
-            this.menu.Controls.Add(this.prodotti);
-            this.menu.Controls.Add(this.clienti);
-            this.menu.Controls.Add(this.tavoli);
-            this.menu.Controls.Add(this.servizi);
-            this.menu.Controls.Add(this.comande);
-            this.menu.Controls.Add(this.prenotazioni);
-            this.menu.Location = new System.Drawing.Point(-1, 0);
-            this.menu.Name = "menu";
-            this.menu.SelectedIndex = 0;
-            this.menu.Size = new System.Drawing.Size(927, 321);
-            this.menu.TabIndex = 3;
+            this.categorie.Controls.Add(this.label1);
+            this.categorie.Controls.Add(this.elencoCat);
+            this.categorie.Location = new System.Drawing.Point(4, 22);
+            this.categorie.Name = "categorie";
+            this.categorie.Padding = new System.Windows.Forms.Padding(3);
+            this.categorie.Size = new System.Drawing.Size(919, 295);
+            this.categorie.TabIndex = 0;
+            this.categorie.Text = "Categorie";
+            this.categorie.UseVisualStyleBackColor = true;
             // 
-            // categoriaBindingSource1
+            // nomecatDataGridViewTextBoxColumn2
             // 
-            this.categoriaBindingSource1.DataSource = typeof(ristorante.Categoria);
+            this.nomecatDataGridViewTextBoxColumn2.DataPropertyName = "nome_cat";
+            this.nomecatDataGridViewTextBoxColumn2.HeaderText = "nome_cat";
+            this.nomecatDataGridViewTextBoxColumn2.Name = "nomecatDataGridViewTextBoxColumn2";
             // 
             // amministrazione
             // 
@@ -321,50 +331,52 @@
             this.Controls.Add(this.menu);
             this.Name = "amministrazione";
             this.Text = "Amministratione / Gestione contenuti";
-            this.prodotti.ResumeLayout(false);
-            this.subMenuProd.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.prodottiBindingSource)).EndInit();
-            this.categorie.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.elencoCat)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).EndInit();
             this.menu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.prodotti.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.elencoCat)).EndInit();
+            this.categorie.ResumeLayout(false);
+            this.categorie.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TabPage prenotazioni;
-        private System.Windows.Forms.TabPage comande;
-        private System.Windows.Forms.TabPage servizi;
-        private System.Windows.Forms.TabPage tavoli;
-        private System.Windows.Forms.TabPage clienti;
-        private System.Windows.Forms.TabPage prodotti;
-        private System.Windows.Forms.TabControl subMenuProd;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage categorie;
         private System.Windows.Forms.TabControl menu;
+        private System.Windows.Forms.BindingSource prodottiBindingSource;
+        private System.Windows.Forms.BindingSource categoriaBindingSource;
+        private System.Windows.Forms.BindingSource categoriaBindingSource1;
+        private DataSet1 dataSet1;
+        private System.Windows.Forms.TabPage categorie;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView elencoCat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomecatDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.TabPage prodotti;
         private System.Windows.Forms.Button prodDel;
         private System.Windows.Forms.Button prodNew;
         private System.Windows.Forms.Button prodMod;
+        private System.Windows.Forms.TabControl subMenuProd;
+        private System.Windows.Forms.TabPage clienti;
+        private System.Windows.Forms.TabPage tavoli;
+        private System.Windows.Forms.TabPage servizi;
+        private System.Windows.Forms.TabPage comande;
+        private System.Windows.Forms.TabPage prenotazioni;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codprodottoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomeprodDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descrizioneDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn nelmenuDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomecatDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn giacenzaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prezzoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn featuredDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.BindingSource prodottiBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prezzoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn giacenzaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomecatDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn nelmenuDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descrizioneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeprodDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codprodottoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomecatDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource categoriaBindingSource;
-        private System.Windows.Forms.BindingSource categoriaBindingSource1;
     }
 }
 

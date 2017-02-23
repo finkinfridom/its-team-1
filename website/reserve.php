@@ -1,6 +1,6 @@
 <?php
 //da riempire con i dati inviati dal modulo della pagina reservation.php
-include "dbConfig.php";
+include "config.php";
 echo "<p>Riassunto richiesta</p>";
 echo "<form>"
 	.$_POST['first_name']

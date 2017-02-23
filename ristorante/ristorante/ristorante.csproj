@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ristorante.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.1.50.2\lib\net451\Dapper.dll</HintPath>
@@ -71,6 +74,7 @@
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Ingredienti.cs" />
+    <Compile Include="oauthProvider.cs" />
     <Compile Include="Prenotazione.cs" />
     <Compile Include="ProdComanda.cs" />
     <Compile Include="ProdIngr.cs" />

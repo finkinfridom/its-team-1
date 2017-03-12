@@ -8,6 +8,28 @@ namespace ristorante
 {
     public class Categoria
     {
-        public string nome_cat { get; set; }
+        private string nomeCat;
+
+
+        public string NomeCat
+        {
+            get
+            {
+                return nomeCat;
+            }
+            set
+            {
+                nomeCat = value;
+            }
+        }
+
+        public Categoria()
+        {
+        }
+
+        public Categoria(String nomeCat)
+        {
+            this.nomeCat=nomeCat;
+        }
     }
 }

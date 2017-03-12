@@ -8,7 +8,44 @@ namespace ristorante
 {
     public class Tavolo
     {
-        public int num_tavolo { get; set; }
-        public bool libero { get; set; }
+        private int numTavolo
+        {
+            get
+            {
+                return numTavolo;
+            }
+            set
+            {
+                this.numTavolo = value;
+            }
+        }
+
+        private bool libero
+        {
+            get
+            {
+                return libero;
+            }
+            set
+            {
+                this.libero = value;
+            }
+        }
+
+        public Tavolo()
+        { }
+
+        public Tavolo(int numTavolo)
+        {
+            this.numTavolo = numTavolo;
+            this.libero = true;
+        }
+
+        public void cambiaStato()
+        {
+            if (this.libero)
+                this.libero = false;
+            else this.libero = true;
+        }
     }
 }

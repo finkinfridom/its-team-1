@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
+using System.Configuration;
+using System.IO;
 
 namespace ristorante
 {
@@ -20,35 +22,56 @@ namespace ristorante
 
         private void amministrazione_Load(object sender, TabControlEventArgs e)
         {
-            //contenuto tab Categorie
-            elencoCat.DataSource = Program.GetAllCategory();
 
-            //subTab del tab prodotti
-            List<Categoria> result = new List<Categoria>();
-            result = Program.GetAllCategory();
-            foreach (Categoria value in result)
+        }
+
+        private void elencoCat_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void amministrazione_Load(object sender, EventArgs e)
+        {
+            GetData("SELECT * FROM categoria", bindingCategorie);
+            GetData("SELECT nome_prod, descrizione, nel_menu, giacenza, prezzo, featured FROM prodotti WHERE nome_cat=" + elencoCatProd.CurrentRow.Cells[0].Selected, bindingProdotti);
+            GetData("SELECT * FROM cliente", bindingClienti);
+            GetData("SELECT num_tavolo, max_posti FROM tavolo", bindingTavoli);
+            GetData("SELECT inizio, num_servizio, fine, servizio.num_persone, totale, servizio.num_tavolo, CONCAT(cognome, ' ', nome) AS cliente, CONCAT(servizio.cod_prenotazione, ' del ', gg_prenotazione) AS prenotazione FROM servizio JOIN cliente ON servizio.cod_cliente=cliente.cod_cliente JOIN prenotazione ON servizio.cod_prenotazione=prenotazione.cod_prenotazione", bindingServizi);
+            GetData("SELECT * FROM comanda", bindingComande);
+            GetData("SELECT cod_prenotazione, gg_prenotazione, giorno, ora, num_persone, CONCAT(cognome, ' ', nome) AS cliente, num_tavolo FROM prenotazione JOIN cliente ON prenotazione.cod_cliente=cliente.cod_cliente", bindingPrenotazioni);
+        }
+
+        private void GetData(string selectCommand, BindingSource a)
+        {
+            try
             {
-            TabPage tp = new TabPage(value.ToString());      //crea schede in base ad estrazione da db
-            subMenuProd.TabPages.Add(tp);
+                string conn= ConfigurationManager.ConnectionStrings["db4free"].ConnectionString;
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(selectCommand, conn);
+                MySqlCommandBuilder commandBuilder = new MySqlCommandBuilder(dataAdapter);
+                DataTable table = new DataTable();
+                table.Locale = System.Globalization.CultureInfo.InvariantCulture;
+                dataAdapter.Fill(table);
+                a.DataSource = table;
             }
-
-            //contenuti subtabs
-            Categoria obj = menu.SelectedTab as Categorie;
-            if (obj != null)
-                elencoCat.DataSource = Program.GetProductByCategory(obj.nome_cat);
+            catch (MySqlException e)
+            {
+                MessageBox.Show(e.ToString());
+            }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
         {
-
+            
         }
 
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        private void elencoCatProd_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            elencoProd.DataSource = bindingProdotti;
+            GetData("SELECT nome_prod, descrizione, nel_menu, giacenza, prezzo, featured FROM prodotti WHERE nome_cat=" + elencoCatProd.CurrentRow.Cells[0].Selected.ToString(), bindingProdotti);
 
         }
 
-        private void categoriaBindingSource_CurrentChanged(object sender, EventArgs e)
+        private void elencoProd_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

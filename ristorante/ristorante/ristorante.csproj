@@ -45,6 +45,7 @@
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,18 +63,23 @@
     <Compile Include="amministrazione.Designer.cs">
       <DependentUpon>amministrazione.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cassa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cassa.Designer.cs">
+      <DependentUpon>Cassa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Categoria.cs" />
     <Compile Include="Clienti.cs" />
     <Compile Include="Comanda.cs" />
-    <Compile Include="DataSet1.cs">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
+    <Compile Include="gender.cs" />
     <Compile Include="Ingredienti.cs" />
+    <Compile Include="logIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="logIn.Designer.cs">
+      <DependentUpon>logIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="oauthProvider.cs" />
     <Compile Include="Prenotazione.cs" />
     <Compile Include="ProdComanda.cs" />
@@ -89,6 +95,12 @@
     <EmbeddedResource Include="amministrazione.resx">
       <DependentUpon>amministrazione.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Cassa.resx">
+      <DependentUpon>Cassa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="logIn.resx">
+      <DependentUpon>logIn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -98,20 +110,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="DataSet1.xsc">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet1.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DataSet1.xss">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Categoria.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlCommand.datasource" />
+    <None Include="Properties\DataSources\Prenotazione.datasource" />
     <None Include="Properties\DataSources\Prodotti.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

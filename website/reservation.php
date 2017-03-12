@@ -20,6 +20,7 @@
                                         function sendData(){
                                             var guest = jQuery('.guest').val();
                                             var datapicker = jQuery('.datapicker').val();
+                                            var lista;
                                             jQuery.ajax({
                                                 type: 'POST',
                                                 url: 'ajax_orari.php',
@@ -30,11 +31,17 @@
                                                 success: function( data )
                                                 {
                                                     var orari=$.parseJSON(data);
+                                                    $('#hour').find('option').remove();
                                                     $.each(opts, function(i, d)
                                                     {
-                                                        $('#hour').append('<option value="' + d.id_orari + '">' + d.ora + '</option>');
+                                                        //lista=JSON.parse(d.ora);
+                                                        for(value in d.ora)
+                                                        {
+                                                            $('#hour').append('<option value="'+lista+'">'+substring(lista,0,-3)+'</option>');
+                                                        }
                                                     }
-                                                }
+                                                },
+                                                dataType:"json"
                                             });
                                         }
                                     </script>
@@ -44,22 +51,39 @@
                                     $nome='marco';
                                     $cognome='marchi';
                                     $mail='pappapia@pappapia.it';
+                                    $cliente=1;
                                     if(true)
                                     {
                                     ?>
                                         <div class="col-lg-6 col-md-6 col-xs-6">
                                             <div><?php echo $nome; ?>, prenota in un attimo il tuo tavolo</div>                                        
-                                            <!-- <input type='text' name='first_name' id='first_name' required='required' class='form' placeholder='First Name' value='".$nome."' readonly />
-                                            <input type='text' name='last_name' id='last_name' required='required' class='form' placeholder='Last Name' value='".$cognome."' readonly />-->
+                                            <input type='hidden' name='first_name' id='first_name' value=<?php echo $nome; ?> />
+                                            <input type='hidden' name='last_name' id='last_name' value=<?php echo $cognome; ?> />
+                                            <input type='hidden' name='cliente' id='cliente' value=<?php echo $cliente; ?> />
                                             <input type='number' name='guest' id='guest' required='required' class='form' placeholder='Inserire numero di persone' min='1' max='25' onchange="sendData()" />
-                                            <input type='date' name='datepicker' id='datepicker' required='required' class='form' min='<?php echo date('Y-m-d'); ?>' value='<?php echo date('Y-m-d'); ?>' onchange="sendData()"/>
+                                            <input type='date' name='datepicker' id='datepicker' required='required' class='form' min=<?php echo date('Y-m-d'); ?> value=<?php echo date('Y-m-d'); ?> onchange="sendData()" />
                                             <!--<input type="text" name="hour" id="hour" required="required" class="form" placeholder="hh:mm" />-->
                                         </div>
 
                                         <div class="col-lg-6 col-md-6 col-xs-6">
                                             <input type="text" name="phone" id="phone" required="required" class="form" placeholder="Inserire numero di telefono" />
                                             <select name="hour" id="hour" class="form">
-                                            
+                                                <?php
+                                                    $sql="  SELECT orari.ora
+                                                            FROM orari
+                                                            WHERE orari.ora NOT IN( SELECT orari.ora
+                                                            FROM orari, prenotazione
+                                                            WHERE orari.ora BETWEEN prenotazione.ora AND addtime(prenotazione.ora, '01:29:00')
+                                                            AND prenotazione.giorno='".$conn->real_escape_string(date('Y-m-d'))."')";
+                                                    $result = $conn->query($sql);
+
+                                                    if ($result->num_rows > 0)
+                                                        while ($row=$result->fetch_assoc())
+                                                        {
+                                                            echo "<option value='".$row['ora']."''>".substr($row['ora'],0,-3)."</option>";
+                                                        }
+                                                    $result->close();
+                                                ?>                                            
                                             </select>
                                             <?php
                                             echo "<input type='email' name='email' id='email' required='required' class='form' placeholder='Inserire un\'email valida'  value=".$mail." readonly />";

@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using Dapper;
 using System.Configuration;
+using System.Data;
 
 namespace ristorante
 {
@@ -22,27 +23,6 @@ namespace ristorante
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new amministrazione());
-        }
-
-        public static List<Categoria> GetAllCategory()
-        {
-            using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["locale"].ConnectionString))
-            {
-                if (conn.State == System.Data.ConnectionState.Closed)
-                    conn.Open();
-                return conn.Query<Categoria>("SELECT nome_cat FROM categoria ORDER BY nome_cat").ToList();
-                //conn.Close();
-            }
-        }
-
-        public static List<Prodotti> GetProductByCategory(String categoria)
-        {
-            using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["locale"].ConnectionString))
-            {
-                if (conn.State == System.Data.ConnectionState.Closed)
-                    conn.Open();
-                return conn.Query<Prodotti>("SELECT * FROM rodotti WHERE " + categoria + " ORDER BY nome_cat").ToList();
-            }
         }
     }
 }

@@ -8,8 +8,57 @@ namespace ristorante
 {
     public class Spese
     {
-        public int cod_spesa { get; set; }
-        public string nome_spesa { get; set; }
-        public bool moltiplicatore { get; set; }
+        private int codSpesa
+        {
+            get
+            {
+                return codSpesa;
+            }
+            set
+            {
+                this.codSpesa = value;
+            }
+        }
+
+        private string nomeSpesa
+        {
+            get
+            {
+                return nomeSpesa;
+            }
+            set
+            {
+                this.nomeSpesa = value;
+            }
+        }
+
+        private bool moltiplicatore
+        {
+            get
+            {
+                return moltiplicatore;
+            }
+            set
+            {
+                this.moltiplicatore = value;
+            }
+        }
+
+        public Spese()
+        { }
+
+        public Spese(int codSpesa, string nomeSpesa)
+        {
+            this.codSpesa = codSpesa;
+            this.nomeSpesa = nomeSpesa;
+            this.moltiplicatore = false;
+        }
+
+        public Spese(int codSpesa, string nomeSpesa, bool moltiplicatore)
+        {
+            this.codSpesa = codSpesa;
+            this.nomeSpesa = nomeSpesa;
+            this.moltiplicatore = moltiplicatore;
+        }
     }
 }

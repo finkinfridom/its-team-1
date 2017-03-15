@@ -23,4 +23,5 @@ C:\Users\swolley\Documents\gitrepos\ristorante\ristorante\ristorante\obj\Debug\r
 C:\Users\swolley\Documents\gitrepos\ristorante\ristorante\ristorante\bin\Debug\MySql.Web.dll
 C:\Users\swolley\Documents\gitrepos\ristorante\ristorante\ristorante\bin\Debug\MySql.Web.xml
 C:\Users\swolley\Documents\gitrepos\ristorante\ristorante\ristorante\obj\Debug\ristorante.logIn.resources
+C:\Users\swolley\Documents\gitrepos\ristorante\ristorante\ristorante\obj\Debug\ristorante.Cucina.resources
 C:\Users\swolley\Documents\gitrepos\ristorante\ristorante\ristorante\obj\Debug\ristorante.csprojResolveAssemblyReference.cache

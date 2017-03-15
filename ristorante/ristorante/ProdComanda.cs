@@ -10,6 +10,8 @@ namespace ristorante
     {
         public Comanda num_comanda { get; set; }
         public Prodotti num_prodotto { get; set; }
+        public short quantita { get; set; }
+        public string note { get; set; }
         public StatoPiatto stato { get; set; }
     }
 }

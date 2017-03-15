@@ -11,7 +11,7 @@ using System.Data;
 namespace ristorante
 {
     static class Program
-    {
+    {  
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -22,7 +22,7 @@ namespace ristorante
             //avvio forms
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new amministrazione());
+            Application.Run(new Amministrazione());
         }
     }
 }

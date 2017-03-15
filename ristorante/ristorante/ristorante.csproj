@@ -57,11 +57,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="amministrazione.cs">
+    <Compile Include="Amministrazione.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="amministrazione.Designer.cs">
-      <DependentUpon>amministrazione.cs</DependentUpon>
+    <Compile Include="Amministrazione.Designer.cs">
+      <DependentUpon>Amministrazione.cs</DependentUpon>
     </Compile>
     <Compile Include="Cassa.cs">
       <SubType>Form</SubType>
@@ -72,6 +72,12 @@
     <Compile Include="Categoria.cs" />
     <Compile Include="Clienti.cs" />
     <Compile Include="Comanda.cs" />
+    <Compile Include="Cucina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cucina.Designer.cs">
+      <DependentUpon>Cucina.cs</DependentUpon>
+    </Compile>
     <Compile Include="gender.cs" />
     <Compile Include="Ingredienti.cs" />
     <Compile Include="logIn.cs">
@@ -92,11 +98,14 @@
     <Compile Include="Spese.cs" />
     <Compile Include="StatoPiatto.cs" />
     <Compile Include="Tavolo.cs" />
-    <EmbeddedResource Include="amministrazione.resx">
-      <DependentUpon>amministrazione.cs</DependentUpon>
+    <EmbeddedResource Include="Amministrazione.resx">
+      <DependentUpon>Amministrazione.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cassa.resx">
       <DependentUpon>Cassa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cucina.resx">
+      <DependentUpon>Cucina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="logIn.resx">
       <DependentUpon>logIn.cs</DependentUpon>

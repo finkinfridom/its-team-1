@@ -42,9 +42,9 @@
             // 
             this.creaServizio.Location = new System.Drawing.Point(12, 12);
             this.creaServizio.Name = "creaServizio";
-            this.creaServizio.Size = new System.Drawing.Size(98, 23);
+            this.creaServizio.Size = new System.Drawing.Size(100, 100);
             this.creaServizio.TabIndex = 0;
-            this.creaServizio.Text = "Comincia Servizio";
+            this.creaServizio.Text = "SERVIZI";
             this.creaServizio.UseVisualStyleBackColor = true;
             this.creaServizio.Click += new System.EventHandler(this.creaServizio_Click);
             // 

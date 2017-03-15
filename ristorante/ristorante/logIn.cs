@@ -12,7 +12,6 @@ namespace ristorante
 {
     public partial class logIn : Form
     {
-        string cod="";
         string codamm="11111";
         string codcassa="66666";
 
@@ -118,7 +117,7 @@ namespace ristorante
                 {
                     if (codice.Text == codamm)
                     {
-                        amministrazione ammForm = new amministrazione();
+                        Amministrazione ammForm = new Amministrazione();
                         ammForm.Show();
                     }
                     else if (codice.Text != codcassa)

@@ -25,3 +25,7 @@ C:\Users\swolley\Documents\gitrepos\ristorante\ristorante\ristorante\bin\Debug\M
 C:\Users\swolley\Documents\gitrepos\ristorante\ristorante\ristorante\obj\Debug\ristorante.logIn.resources
 C:\Users\swolley\Documents\gitrepos\ristorante\ristorante\ristorante\obj\Debug\ristorante.Cucina.resources
 C:\Users\swolley\Documents\gitrepos\ristorante\ristorante\ristorante\obj\Debug\ristorante.csprojResolveAssemblyReference.cache
+C:\Users\swolley\Documents\gitrepos\ristorante\ristorante\ristorante\obj\Debug\ristorante.ClientiMod.resources
+C:\Users\swolley\Documents\gitrepos\ristorante\ristorante\ristorante\obj\Debug\ristorante.TavoliMod.resources
+C:\Users\swolley\Documents\gitrepos\ristorante\ristorante\ristorante\obj\Debug\ristorante.ServiziMod.resources
+C:\Users\swolley\Documents\gitrepos\ristorante\ristorante\ristorante\obj\Debug\ristorante.CategorieMod.resources

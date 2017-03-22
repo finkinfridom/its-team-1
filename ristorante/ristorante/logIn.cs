@@ -10,19 +10,39 @@ using System.Windows.Forms;
 
 namespace ristorante
 {
-    public partial class logIn : Form
+    public partial class LogIn : Form
     {
         string codamm="11111";
         string codcassa="66666";
 
-        public logIn()
+        public LogIn()
         {
             InitializeComponent();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+            if (codice.Text.Length == 5)
+            {
+                if (codice.Text != codamm && codice.Text != codcassa)
+                {
+                    erroreLbl.Show();
+                }
+                else
+                {
+                    if (codice.Text == codamm)
+                    {
+                        Amministrazione ammForm = new Amministrazione();
+                        ammForm.Show();
+                    }
+                    else if (codice.Text != codcassa)
+                    {
+                        Cassa cassaForm = new Cassa();
+                        cassaForm.Show();
+                    }
+                    this.Hide();
+                }
+            }
         }
 
         private void btn1_Click(object sender, EventArgs e)
@@ -107,27 +127,7 @@ namespace ristorante
 
         private void verifica_Click(object sender, EventArgs e)
         {
-            if (codice.Text.Length == 5)
-            {
-                if (codice.Text != codamm && codice.Text != codcassa)
-                {
-                    erroreLbl.Show();
-                }
-                else
-                {
-                    if (codice.Text == codamm)
-                    {
-                        Amministrazione ammForm = new Amministrazione();
-                        ammForm.Show();
-                    }
-                    else if (codice.Text != codcassa)
-                    {
-                        Cassa cassaForm = new Cassa();
-                        cassaForm.Show();
-                    }
-                    this.Hide();
-                }
-            }
+            
         }
     }
 }

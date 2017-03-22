@@ -22,7 +22,7 @@ namespace ristorante
             //avvio forms
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Amministrazione());
+            Application.Run(new LogIn());
         }
     }
 }

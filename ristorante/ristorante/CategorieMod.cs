@@ -12,31 +12,29 @@ using System.Windows.Forms;
 
 namespace ristorante
 {
-    public partial class Cassa : Form
+    public partial class CategorieMod : Form
     {
-        public Cassa()
+        DataTable tableCategorie = new DataTable();
+
+        public CategorieMod(string id)
         {
             InitializeComponent();
+            GetData(tableCategorie, "SELECT * FROM categoria WHERE nome_cat=" + id, bindingCategorie);
+            DataRowView current = (DataRowView)bindingCategorie.Current;
+            categoria.Text = current["nome_cat"].ToString();
+            if (current["attivo"].ToString() == "1")
+                attiva.Checked = true;
+            else attiva.Checked = false;
         }
 
-        private void creaServizio_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Cassa_Load(object sender, EventArgs e)
-        {
-            GetData("SELECT ora, cognome, num_persone, num_tavolo FROM prenotazione JOIN cliente ON prenotazione.cod_cliente=cliente.cod_cliente WHERE giorno=CURDATE() AND cod_prenotazione NOT IN (SELECT cod_prenotazione FROM servizio WHERE DATE(inizio) LIKE CURDATE()) ORDER BY ora", bindingPrenotazioni);
-        }
-
-        private void GetData(string selectCommand, BindingSource a)
+        private void GetData(DataTable table, string selectCommand, BindingSource a)
         {
             try
             {
                 string conn = ConfigurationManager.ConnectionStrings["db4free"].ConnectionString;
                 MySqlDataAdapter dataAdapter = new MySqlDataAdapter(selectCommand, conn);
                 MySqlCommandBuilder commandBuilder = new MySqlCommandBuilder(dataAdapter);
-                DataTable table = new DataTable();
+                //DataTable table = new DataTable();
                 table.Locale = System.Globalization.CultureInfo.InvariantCulture;
                 dataAdapter.Fill(table);
                 a.DataSource = table;

@@ -29,8 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.menu = new System.Windows.Forms.TabControl();
+            this.btnCancProdotti = new System.Windows.Forms.TabControl();
             this.prodotti = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.elencoProd = new System.Windows.Forms.DataGridView();
             this.Column42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,19 +42,16 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.bindingProdotti = new System.Windows.Forms.BindingSource(this.components);
             this.elencoCatProd = new System.Windows.Forms.DataGridView();
-            this.CategorieProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.bindingCategorie = new System.Windows.Forms.BindingSource(this.components);
             this.prodDel = new System.Windows.Forms.Button();
-            this.prodNew = new System.Windows.Forms.Button();
-            this.prodMod = new System.Windows.Forms.Button();
+            this.btnAddProdotti = new System.Windows.Forms.Button();
+            this.btnModProdotti = new System.Windows.Forms.Button();
             this.subMenuProd = new System.Windows.Forms.TabControl();
             this.clienti = new System.Windows.Forms.TabPage();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnCancClienti = new System.Windows.Forms.Button();
+            this.btnAddClienti = new System.Windows.Forms.Button();
+            this.btnModClienti = new System.Windows.Forms.Button();
             this.elencoClienti = new System.Windows.Forms.DataGridView();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,20 +65,20 @@
             this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingClienti = new System.Windows.Forms.BindingSource(this.components);
             this.tavoli = new System.Windows.Forms.TabPage();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnCancTavoli = new System.Windows.Forms.Button();
+            this.btnAddTavoli = new System.Windows.Forms.Button();
+            this.btnModTavoli = new System.Windows.Forms.Button();
             this.elencoTavoli = new System.Windows.Forms.DataGridView();
             this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingTavoli = new System.Windows.Forms.BindingSource(this.components);
             this.servizi = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
             this.checkServizi = new System.Windows.Forms.CheckBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
+            this.btnCancServizi = new System.Windows.Forms.Button();
+            this.btnAddServizi = new System.Windows.Forms.Button();
+            this.btnModoServizi = new System.Windows.Forms.Button();
             this.dateServizi = new System.Windows.Forms.DateTimePicker();
             this.elencoServizi = new System.Windows.Forms.DataGridView();
             this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,27 +89,28 @@
             this.Column27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingServizi = new System.Windows.Forms.BindingSource(this.components);
             this.comande = new System.Windows.Forms.TabPage();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.elencoServCom = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.checkComande = new System.Windows.Forms.CheckBox();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
+            this.btnCancComande = new System.Windows.Forms.Button();
+            this.btnAddComande = new System.Windows.Forms.Button();
+            this.btnModComande = new System.Windows.Forms.Button();
             this.dateComande = new System.Windows.Forms.DateTimePicker();
             this.elencoComande = new System.Windows.Forms.DataGridView();
             this.Column31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingComande = new System.Windows.Forms.BindingSource(this.components);
             this.prenotazioni = new System.Windows.Forms.TabPage();
+            this.label8 = new System.Windows.Forms.Label();
             this.checkPrenotazioni = new System.Windows.Forms.CheckBox();
-            this.btnCancPrenotazione = new System.Windows.Forms.Button();
-            this.btnNuovoPrenotazione = new System.Windows.Forms.Button();
-            this.btnModPrenotazione = new System.Windows.Forms.Button();
+            this.btnCancPrenotazioni = new System.Windows.Forms.Button();
+            this.btnAddPrenotazioni = new System.Windows.Forms.Button();
+            this.btnModPrenotazioni = new System.Windows.Forms.Button();
             this.datePrenotazioni = new System.Windows.Forms.DateTimePicker();
             this.elencoPrenotazioni = new System.Windows.Forms.DataGridView();
             this.Column33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -120,7 +120,6 @@
             this.Column37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingPrenotazioni = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -133,61 +132,100 @@
             this.nomeprodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codprodottoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomecatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menu.SuspendLayout();
+            this.bindingProdotti = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingCategorie = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingClienti = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingTavoli = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingServizi = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingComande = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingPrenotazioni = new System.Windows.Forms.BindingSource(this.components);
+            this.Categorie = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
+            this.elencoCategorie = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.CategorieProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnCancProdotti.SuspendLayout();
             this.prodotti.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.elencoProd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingProdotti)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.elencoCatProd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingCategorie)).BeginInit();
             this.clienti.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.elencoClienti)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingClienti)).BeginInit();
             this.tavoli.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.elencoTavoli)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingTavoli)).BeginInit();
             this.servizi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.elencoServizi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingServizi)).BeginInit();
             this.comande.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.elencoServCom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.elencoComande)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingComande)).BeginInit();
             this.prenotazioni.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.elencoPrenotazioni)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingPrenotazioni)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingProdotti)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingCategorie)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingClienti)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingTavoli)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingServizi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingComande)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingPrenotazioni)).BeginInit();
+            this.Categorie.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.elencoCategorie)).BeginInit();
             this.SuspendLayout();
             // 
-            // menu
+            // btnCancProdotti
             // 
-            this.menu.Controls.Add(this.prodotti);
-            this.menu.Controls.Add(this.clienti);
-            this.menu.Controls.Add(this.tavoli);
-            this.menu.Controls.Add(this.servizi);
-            this.menu.Controls.Add(this.comande);
-            this.menu.Controls.Add(this.prenotazioni);
-            this.menu.Location = new System.Drawing.Point(0, 0);
-            this.menu.Name = "menu";
-            this.menu.SelectedIndex = 0;
-            this.menu.Size = new System.Drawing.Size(928, 324);
-            this.menu.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
-            this.menu.TabIndex = 3;
+            this.btnCancProdotti.Controls.Add(this.Categorie);
+            this.btnCancProdotti.Controls.Add(this.prodotti);
+            this.btnCancProdotti.Controls.Add(this.clienti);
+            this.btnCancProdotti.Controls.Add(this.tavoli);
+            this.btnCancProdotti.Controls.Add(this.servizi);
+            this.btnCancProdotti.Controls.Add(this.comande);
+            this.btnCancProdotti.Controls.Add(this.prenotazioni);
+            this.btnCancProdotti.Location = new System.Drawing.Point(0, 0);
+            this.btnCancProdotti.Name = "btnCancProdotti";
+            this.btnCancProdotti.SelectedIndex = 0;
+            this.btnCancProdotti.Size = new System.Drawing.Size(928, 324);
+            this.btnCancProdotti.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
+            this.btnCancProdotti.TabIndex = 3;
             // 
             // prodotti
             // 
+            this.prodotti.Controls.Add(this.label2);
+            this.prodotti.Controls.Add(this.label1);
             this.prodotti.Controls.Add(this.elencoProd);
             this.prodotti.Controls.Add(this.elencoCatProd);
             this.prodotti.Controls.Add(this.prodDel);
-            this.prodotti.Controls.Add(this.prodNew);
-            this.prodotti.Controls.Add(this.prodMod);
+            this.prodotti.Controls.Add(this.btnAddProdotti);
+            this.prodotti.Controls.Add(this.btnModProdotti);
             this.prodotti.Controls.Add(this.subMenuProd);
             this.prodotti.Location = new System.Drawing.Point(4, 22);
             this.prodotti.Name = "prodotti";
             this.prodotti.Padding = new System.Windows.Forms.Padding(3);
             this.prodotti.Size = new System.Drawing.Size(920, 298);
             this.prodotti.TabIndex = 1;
-            this.prodotti.Text = "Categorie/Prodotti";
+            this.prodotti.Text = "Prodotti";
             this.prodotti.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(167, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Prodotti";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Categorie";
             // 
             // elencoProd
             // 
@@ -211,13 +249,13 @@
             this.Column8});
             this.elencoProd.DataSource = this.bindingProdotti;
             this.elencoProd.EnableHeadersVisualStyles = false;
-            this.elencoProd.Location = new System.Drawing.Point(170, 0);
+            this.elencoProd.Location = new System.Drawing.Point(170, 19);
             this.elencoProd.MultiSelect = false;
             this.elencoProd.Name = "elencoProd";
             this.elencoProd.ReadOnly = true;
             this.elencoProd.RowHeadersVisible = false;
             this.elencoProd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.elencoProd.Size = new System.Drawing.Size(568, 291);
+            this.elencoProd.Size = new System.Drawing.Size(568, 272);
             this.elencoProd.TabIndex = 5;
             this.elencoProd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.elencoProd_CellContentClick);
             // 
@@ -298,70 +336,50 @@
             this.elencoCatProd.AllowUserToResizeColumns = false;
             this.elencoCatProd.AllowUserToResizeRows = false;
             this.elencoCatProd.AutoGenerateColumns = false;
-            this.elencoCatProd.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.elencoCatProd.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.elencoCatProd.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.elencoCatProd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.elencoCatProd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CategorieProd,
-            this.Column1});
+            this.CategorieProd});
             this.elencoCatProd.DataSource = this.bindingCategorie;
             this.elencoCatProd.EnableHeadersVisualStyles = false;
-            this.elencoCatProd.Location = new System.Drawing.Point(0, 0);
+            this.elencoCatProd.Location = new System.Drawing.Point(0, 19);
             this.elencoCatProd.MultiSelect = false;
             this.elencoCatProd.Name = "elencoCatProd";
             this.elencoCatProd.ReadOnly = true;
             this.elencoCatProd.RowHeadersVisible = false;
             this.elencoCatProd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.elencoCatProd.Size = new System.Drawing.Size(164, 291);
+            this.elencoCatProd.Size = new System.Drawing.Size(164, 272);
             this.elencoCatProd.TabIndex = 4;
             this.elencoCatProd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.elencoCatProd_CellContentClick);
             // 
-            // CategorieProd
-            // 
-            this.CategorieProd.DataPropertyName = "nome_cat";
-            this.CategorieProd.HeaderText = "Categorie";
-            this.CategorieProd.Name = "CategorieProd";
-            this.CategorieProd.ReadOnly = true;
-            this.CategorieProd.Width = 77;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "attivo";
-            this.Column1.HeaderText = "Attivo";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 40;
-            // 
-            // bindingCategorie
-            // 
-            this.bindingCategorie.CurrentChanged += new System.EventHandler(this.bindingSource1_CurrentChanged);
-            // 
             // prodDel
             // 
-            this.prodDel.Location = new System.Drawing.Point(744, 61);
+            this.prodDel.Location = new System.Drawing.Point(744, 77);
             this.prodDel.Name = "prodDel";
             this.prodDel.Size = new System.Drawing.Size(75, 23);
             this.prodDel.TabIndex = 3;
             this.prodDel.Text = "Cancella";
             this.prodDel.UseVisualStyleBackColor = true;
+            this.prodDel.Click += new System.EventHandler(this.prodDel_Click);
             // 
-            // prodNew
+            // btnAddProdotti
             // 
-            this.prodNew.Location = new System.Drawing.Point(744, 3);
-            this.prodNew.Name = "prodNew";
-            this.prodNew.Size = new System.Drawing.Size(75, 23);
-            this.prodNew.TabIndex = 2;
-            this.prodNew.Text = "Nuovo";
-            this.prodNew.UseVisualStyleBackColor = true;
+            this.btnAddProdotti.Location = new System.Drawing.Point(744, 19);
+            this.btnAddProdotti.Name = "btnAddProdotti";
+            this.btnAddProdotti.Size = new System.Drawing.Size(75, 23);
+            this.btnAddProdotti.TabIndex = 2;
+            this.btnAddProdotti.Text = "Nuovo";
+            this.btnAddProdotti.UseVisualStyleBackColor = true;
             // 
-            // prodMod
+            // btnModProdotti
             // 
-            this.prodMod.Location = new System.Drawing.Point(744, 32);
-            this.prodMod.Name = "prodMod";
-            this.prodMod.Size = new System.Drawing.Size(75, 23);
-            this.prodMod.TabIndex = 1;
-            this.prodMod.Text = "Modifica";
-            this.prodMod.UseVisualStyleBackColor = true;
+            this.btnModProdotti.Location = new System.Drawing.Point(744, 48);
+            this.btnModProdotti.Name = "btnModProdotti";
+            this.btnModProdotti.Size = new System.Drawing.Size(75, 23);
+            this.btnModProdotti.TabIndex = 1;
+            this.btnModProdotti.Text = "Modifica";
+            this.btnModProdotti.UseVisualStyleBackColor = true;
             // 
             // subMenuProd
             // 
@@ -373,9 +391,10 @@
             // 
             // clienti
             // 
-            this.clienti.Controls.Add(this.button4);
-            this.clienti.Controls.Add(this.button5);
-            this.clienti.Controls.Add(this.button6);
+            this.clienti.Controls.Add(this.label3);
+            this.clienti.Controls.Add(this.btnCancClienti);
+            this.clienti.Controls.Add(this.btnAddClienti);
+            this.clienti.Controls.Add(this.btnModClienti);
             this.clienti.Controls.Add(this.elencoClienti);
             this.clienti.Location = new System.Drawing.Point(4, 22);
             this.clienti.Name = "clienti";
@@ -384,32 +403,43 @@
             this.clienti.Text = "Clienti";
             this.clienti.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // label3
             // 
-            this.button4.Location = new System.Drawing.Point(814, 61);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Cancella";
-            this.button4.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(4, 4);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Clienti";
             // 
-            // button5
+            // btnCancClienti
             // 
-            this.button5.Location = new System.Drawing.Point(814, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Nuovo";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnCancClienti.Location = new System.Drawing.Point(814, 78);
+            this.btnCancClienti.Name = "btnCancClienti";
+            this.btnCancClienti.Size = new System.Drawing.Size(75, 23);
+            this.btnCancClienti.TabIndex = 6;
+            this.btnCancClienti.Text = "Cancella";
+            this.btnCancClienti.UseVisualStyleBackColor = true;
+            this.btnCancClienti.Click += new System.EventHandler(this.btnCancClienti_Click);
             // 
-            // button6
+            // btnAddClienti
             // 
-            this.button6.Location = new System.Drawing.Point(814, 32);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "Modifica";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnAddClienti.Location = new System.Drawing.Point(814, 20);
+            this.btnAddClienti.Name = "btnAddClienti";
+            this.btnAddClienti.Size = new System.Drawing.Size(75, 23);
+            this.btnAddClienti.TabIndex = 5;
+            this.btnAddClienti.Text = "Nuovo";
+            this.btnAddClienti.UseVisualStyleBackColor = true;
+            // 
+            // btnModClienti
+            // 
+            this.btnModClienti.Location = new System.Drawing.Point(814, 49);
+            this.btnModClienti.Name = "btnModClienti";
+            this.btnModClienti.Size = new System.Drawing.Size(75, 23);
+            this.btnModClienti.TabIndex = 4;
+            this.btnModClienti.Text = "Modifica";
+            this.btnModClienti.UseVisualStyleBackColor = true;
+            this.btnModClienti.Click += new System.EventHandler(this.btnModClienti_Click);
             // 
             // elencoClienti
             // 
@@ -437,14 +467,15 @@
             this.Column20});
             this.elencoClienti.DataSource = this.bindingClienti;
             this.elencoClienti.EnableHeadersVisualStyles = false;
-            this.elencoClienti.Location = new System.Drawing.Point(0, 0);
+            this.elencoClienti.Location = new System.Drawing.Point(0, 20);
             this.elencoClienti.MultiSelect = false;
             this.elencoClienti.Name = "elencoClienti";
             this.elencoClienti.ReadOnly = true;
             this.elencoClienti.RowHeadersVisible = false;
             this.elencoClienti.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.elencoClienti.Size = new System.Drawing.Size(808, 288);
+            this.elencoClienti.Size = new System.Drawing.Size(808, 268);
             this.elencoClienti.TabIndex = 0;
+            this.elencoClienti.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.elencoClienti_CellContentClick);
             // 
             // Column9
             // 
@@ -544,9 +575,10 @@
             // 
             // tavoli
             // 
-            this.tavoli.Controls.Add(this.button7);
-            this.tavoli.Controls.Add(this.button8);
-            this.tavoli.Controls.Add(this.button9);
+            this.tavoli.Controls.Add(this.label4);
+            this.tavoli.Controls.Add(this.btnCancTavoli);
+            this.tavoli.Controls.Add(this.btnAddTavoli);
+            this.tavoli.Controls.Add(this.btnModTavoli);
             this.tavoli.Controls.Add(this.elencoTavoli);
             this.tavoli.Location = new System.Drawing.Point(4, 22);
             this.tavoli.Name = "tavoli";
@@ -555,32 +587,42 @@
             this.tavoli.Text = "Tavoli";
             this.tavoli.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // label4
             // 
-            this.button7.Location = new System.Drawing.Point(246, 61);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 9;
-            this.button7.Text = "Cancella";
-            this.button7.UseVisualStyleBackColor = true;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 3);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(36, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Tavoli";
             // 
-            // button8
+            // btnCancTavoli
             // 
-            this.button8.Location = new System.Drawing.Point(246, 3);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 8;
-            this.button8.Text = "Nuovo";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnCancTavoli.Location = new System.Drawing.Point(178, 77);
+            this.btnCancTavoli.Name = "btnCancTavoli";
+            this.btnCancTavoli.Size = new System.Drawing.Size(75, 23);
+            this.btnCancTavoli.TabIndex = 9;
+            this.btnCancTavoli.Text = "Cancella";
+            this.btnCancTavoli.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // btnAddTavoli
             // 
-            this.button9.Location = new System.Drawing.Point(246, 32);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 7;
-            this.button9.Text = "Modifica";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btnAddTavoli.Location = new System.Drawing.Point(178, 19);
+            this.btnAddTavoli.Name = "btnAddTavoli";
+            this.btnAddTavoli.Size = new System.Drawing.Size(75, 23);
+            this.btnAddTavoli.TabIndex = 8;
+            this.btnAddTavoli.Text = "Nuovo";
+            this.btnAddTavoli.UseVisualStyleBackColor = true;
+            // 
+            // btnModTavoli
+            // 
+            this.btnModTavoli.Location = new System.Drawing.Point(178, 48);
+            this.btnModTavoli.Name = "btnModTavoli";
+            this.btnModTavoli.Size = new System.Drawing.Size(75, 23);
+            this.btnModTavoli.TabIndex = 7;
+            this.btnModTavoli.Text = "Modifica";
+            this.btnModTavoli.UseVisualStyleBackColor = true;
+            this.btnModTavoli.Click += new System.EventHandler(this.btnModTavoli_Click);
             // 
             // elencoTavoli
             // 
@@ -598,13 +640,13 @@
             this.Column22});
             this.elencoTavoli.DataSource = this.bindingTavoli;
             this.elencoTavoli.EnableHeadersVisualStyles = false;
-            this.elencoTavoli.Location = new System.Drawing.Point(0, 0);
+            this.elencoTavoli.Location = new System.Drawing.Point(0, 19);
             this.elencoTavoli.MultiSelect = false;
             this.elencoTavoli.Name = "elencoTavoli";
             this.elencoTavoli.ReadOnly = true;
             this.elencoTavoli.RowHeadersVisible = false;
             this.elencoTavoli.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.elencoTavoli.Size = new System.Drawing.Size(240, 289);
+            this.elencoTavoli.Size = new System.Drawing.Size(172, 270);
             this.elencoTavoli.TabIndex = 0;
             // 
             // Column21
@@ -625,10 +667,11 @@
             // 
             // servizi
             // 
+            this.servizi.Controls.Add(this.label5);
             this.servizi.Controls.Add(this.checkServizi);
-            this.servizi.Controls.Add(this.button10);
-            this.servizi.Controls.Add(this.button11);
-            this.servizi.Controls.Add(this.button12);
+            this.servizi.Controls.Add(this.btnCancServizi);
+            this.servizi.Controls.Add(this.btnAddServizi);
+            this.servizi.Controls.Add(this.btnModoServizi);
             this.servizi.Controls.Add(this.dateServizi);
             this.servizi.Controls.Add(this.elencoServizi);
             this.servizi.Location = new System.Drawing.Point(4, 22);
@@ -638,10 +681,19 @@
             this.servizi.Text = "Servizi";
             this.servizi.UseVisualStyleBackColor = true;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 3);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(38, 13);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Servizi";
+            // 
             // checkServizi
             // 
             this.checkServizi.AutoSize = true;
-            this.checkServizi.Location = new System.Drawing.Point(697, 29);
+            this.checkServizi.Location = new System.Drawing.Point(697, 45);
             this.checkServizi.Name = "checkServizi";
             this.checkServizi.Size = new System.Drawing.Size(107, 17);
             this.checkServizi.TabIndex = 18;
@@ -649,36 +701,37 @@
             this.checkServizi.UseVisualStyleBackColor = true;
             this.checkServizi.CheckedChanged += new System.EventHandler(this.checkServizi_CheckedChanged);
             // 
-            // button10
+            // btnCancServizi
             // 
-            this.button10.Location = new System.Drawing.Point(697, 110);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 12;
-            this.button10.Text = "Cancella";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btnCancServizi.Location = new System.Drawing.Point(697, 126);
+            this.btnCancServizi.Name = "btnCancServizi";
+            this.btnCancServizi.Size = new System.Drawing.Size(75, 23);
+            this.btnCancServizi.TabIndex = 12;
+            this.btnCancServizi.Text = "Cancella";
+            this.btnCancServizi.UseVisualStyleBackColor = true;
             // 
-            // button11
+            // btnAddServizi
             // 
-            this.button11.Location = new System.Drawing.Point(697, 52);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
-            this.button11.TabIndex = 11;
-            this.button11.Text = "Nuovo";
-            this.button11.UseVisualStyleBackColor = true;
+            this.btnAddServizi.Location = new System.Drawing.Point(697, 68);
+            this.btnAddServizi.Name = "btnAddServizi";
+            this.btnAddServizi.Size = new System.Drawing.Size(75, 23);
+            this.btnAddServizi.TabIndex = 11;
+            this.btnAddServizi.Text = "Nuovo";
+            this.btnAddServizi.UseVisualStyleBackColor = true;
             // 
-            // button12
+            // btnModoServizi
             // 
-            this.button12.Location = new System.Drawing.Point(697, 81);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(75, 23);
-            this.button12.TabIndex = 10;
-            this.button12.Text = "Modifica";
-            this.button12.UseVisualStyleBackColor = true;
+            this.btnModoServizi.Location = new System.Drawing.Point(697, 97);
+            this.btnModoServizi.Name = "btnModoServizi";
+            this.btnModoServizi.Size = new System.Drawing.Size(75, 23);
+            this.btnModoServizi.TabIndex = 10;
+            this.btnModoServizi.Text = "Modifica";
+            this.btnModoServizi.UseVisualStyleBackColor = true;
+            this.btnModoServizi.Click += new System.EventHandler(this.btnModoServizi_Click);
             // 
             // dateServizi
             // 
-            this.dateServizi.Location = new System.Drawing.Point(697, 3);
+            this.dateServizi.Location = new System.Drawing.Point(697, 19);
             this.dateServizi.MinDate = new System.DateTime(2017, 1, 1, 0, 0, 0, 0);
             this.dateServizi.Name = "dateServizi";
             this.dateServizi.Size = new System.Drawing.Size(200, 20);
@@ -707,13 +760,13 @@
             this.Column30});
             this.elencoServizi.DataSource = this.bindingServizi;
             this.elencoServizi.EnableHeadersVisualStyles = false;
-            this.elencoServizi.Location = new System.Drawing.Point(0, 0);
+            this.elencoServizi.Location = new System.Drawing.Point(0, 19);
             this.elencoServizi.MultiSelect = false;
             this.elencoServizi.Name = "elencoServizi";
             this.elencoServizi.ReadOnly = true;
             this.elencoServizi.RowHeadersVisible = false;
             this.elencoServizi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.elencoServizi.Size = new System.Drawing.Size(691, 289);
+            this.elencoServizi.Size = new System.Drawing.Size(691, 270);
             this.elencoServizi.TabIndex = 0;
             // 
             // Column24
@@ -782,11 +835,13 @@
             // 
             // comande
             // 
+            this.comande.Controls.Add(this.label7);
+            this.comande.Controls.Add(this.label6);
             this.comande.Controls.Add(this.elencoServCom);
             this.comande.Controls.Add(this.checkComande);
-            this.comande.Controls.Add(this.button13);
-            this.comande.Controls.Add(this.button14);
-            this.comande.Controls.Add(this.button15);
+            this.comande.Controls.Add(this.btnCancComande);
+            this.comande.Controls.Add(this.btnAddComande);
+            this.comande.Controls.Add(this.btnModComande);
             this.comande.Controls.Add(this.dateComande);
             this.comande.Controls.Add(this.elencoComande);
             this.comande.Location = new System.Drawing.Point(4, 22);
@@ -795,6 +850,24 @@
             this.comande.TabIndex = 5;
             this.comande.Text = "Comande";
             this.comande.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(243, 3);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(52, 13);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Comande";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 3);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(38, 13);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "Servizi";
             // 
             // elencoServCom
             // 
@@ -813,13 +886,13 @@
             this.Column40});
             this.elencoServCom.DataSource = this.bindingServizi;
             this.elencoServCom.EnableHeadersVisualStyles = false;
-            this.elencoServCom.Location = new System.Drawing.Point(0, 0);
+            this.elencoServCom.Location = new System.Drawing.Point(0, 19);
             this.elencoServCom.MultiSelect = false;
             this.elencoServCom.Name = "elencoServCom";
             this.elencoServCom.ReadOnly = true;
             this.elencoServCom.RowHeadersVisible = false;
             this.elencoServCom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.elencoServCom.Size = new System.Drawing.Size(240, 150);
+            this.elencoServCom.Size = new System.Drawing.Size(240, 279);
             this.elencoServCom.TabIndex = 18;
             this.elencoServCom.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.elencoServCom_CellContentClick);
             // 
@@ -850,7 +923,7 @@
             // checkComande
             // 
             this.checkComande.AutoSize = true;
-            this.checkComande.Location = new System.Drawing.Point(697, 29);
+            this.checkComande.Location = new System.Drawing.Point(697, 45);
             this.checkComande.Name = "checkComande";
             this.checkComande.Size = new System.Drawing.Size(107, 17);
             this.checkComande.TabIndex = 17;
@@ -858,36 +931,36 @@
             this.checkComande.UseVisualStyleBackColor = true;
             this.checkComande.CheckedChanged += new System.EventHandler(this.checkComande_CheckedChanged);
             // 
-            // button13
+            // btnCancComande
             // 
-            this.button13.Location = new System.Drawing.Point(697, 110);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(75, 23);
-            this.button13.TabIndex = 16;
-            this.button13.Text = "Cancella";
-            this.button13.UseVisualStyleBackColor = true;
+            this.btnCancComande.Location = new System.Drawing.Point(697, 126);
+            this.btnCancComande.Name = "btnCancComande";
+            this.btnCancComande.Size = new System.Drawing.Size(75, 23);
+            this.btnCancComande.TabIndex = 16;
+            this.btnCancComande.Text = "Cancella";
+            this.btnCancComande.UseVisualStyleBackColor = true;
             // 
-            // button14
+            // btnAddComande
             // 
-            this.button14.Location = new System.Drawing.Point(697, 52);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(75, 23);
-            this.button14.TabIndex = 15;
-            this.button14.Text = "Nuovo";
-            this.button14.UseVisualStyleBackColor = true;
+            this.btnAddComande.Location = new System.Drawing.Point(697, 68);
+            this.btnAddComande.Name = "btnAddComande";
+            this.btnAddComande.Size = new System.Drawing.Size(75, 23);
+            this.btnAddComande.TabIndex = 15;
+            this.btnAddComande.Text = "Nuovo";
+            this.btnAddComande.UseVisualStyleBackColor = true;
             // 
-            // button15
+            // btnModComande
             // 
-            this.button15.Location = new System.Drawing.Point(697, 81);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(75, 23);
-            this.button15.TabIndex = 14;
-            this.button15.Text = "Modifica";
-            this.button15.UseVisualStyleBackColor = true;
+            this.btnModComande.Location = new System.Drawing.Point(697, 97);
+            this.btnModComande.Name = "btnModComande";
+            this.btnModComande.Size = new System.Drawing.Size(75, 23);
+            this.btnModComande.TabIndex = 14;
+            this.btnModComande.Text = "Modifica";
+            this.btnModComande.UseVisualStyleBackColor = true;
             // 
             // dateComande
             // 
-            this.dateComande.Location = new System.Drawing.Point(697, 3);
+            this.dateComande.Location = new System.Drawing.Point(697, 19);
             this.dateComande.MinDate = new System.DateTime(2017, 1, 1, 0, 0, 0, 0);
             this.dateComande.Name = "dateComande";
             this.dateComande.Size = new System.Drawing.Size(200, 20);
@@ -911,13 +984,13 @@
             this.Column41});
             this.elencoComande.DataSource = this.bindingComande;
             this.elencoComande.EnableHeadersVisualStyles = false;
-            this.elencoComande.Location = new System.Drawing.Point(246, 0);
+            this.elencoComande.Location = new System.Drawing.Point(246, 19);
             this.elencoComande.MultiSelect = false;
             this.elencoComande.Name = "elencoComande";
             this.elencoComande.ReadOnly = true;
             this.elencoComande.RowHeadersVisible = false;
             this.elencoComande.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.elencoComande.Size = new System.Drawing.Size(445, 150);
+            this.elencoComande.Size = new System.Drawing.Size(445, 279);
             this.elencoComande.TabIndex = 0;
             // 
             // Column31
@@ -947,10 +1020,11 @@
             // 
             // prenotazioni
             // 
+            this.prenotazioni.Controls.Add(this.label8);
             this.prenotazioni.Controls.Add(this.checkPrenotazioni);
-            this.prenotazioni.Controls.Add(this.btnCancPrenotazione);
-            this.prenotazioni.Controls.Add(this.btnNuovoPrenotazione);
-            this.prenotazioni.Controls.Add(this.btnModPrenotazione);
+            this.prenotazioni.Controls.Add(this.btnCancPrenotazioni);
+            this.prenotazioni.Controls.Add(this.btnAddPrenotazioni);
+            this.prenotazioni.Controls.Add(this.btnModPrenotazioni);
             this.prenotazioni.Controls.Add(this.datePrenotazioni);
             this.prenotazioni.Controls.Add(this.elencoPrenotazioni);
             this.prenotazioni.Location = new System.Drawing.Point(4, 22);
@@ -960,10 +1034,19 @@
             this.prenotazioni.Text = "Prenotazioni";
             this.prenotazioni.UseVisualStyleBackColor = true;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(3, 3);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(65, 13);
+            this.label8.TabIndex = 22;
+            this.label8.Text = "Prenotazioni";
+            // 
             // checkPrenotazioni
             // 
             this.checkPrenotazioni.AutoSize = true;
-            this.checkPrenotazioni.Location = new System.Drawing.Point(666, 29);
+            this.checkPrenotazioni.Location = new System.Drawing.Point(696, 45);
             this.checkPrenotazioni.Name = "checkPrenotazioni";
             this.checkPrenotazioni.Size = new System.Drawing.Size(107, 17);
             this.checkPrenotazioni.TabIndex = 21;
@@ -971,38 +1054,38 @@
             this.checkPrenotazioni.UseVisualStyleBackColor = true;
             this.checkPrenotazioni.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // btnCancPrenotazione
+            // btnCancPrenotazioni
             // 
-            this.btnCancPrenotazione.Location = new System.Drawing.Point(666, 110);
-            this.btnCancPrenotazione.Name = "btnCancPrenotazione";
-            this.btnCancPrenotazione.Size = new System.Drawing.Size(75, 23);
-            this.btnCancPrenotazione.TabIndex = 20;
-            this.btnCancPrenotazione.Text = "Cancella";
-            this.btnCancPrenotazione.UseVisualStyleBackColor = true;
-            this.btnCancPrenotazione.Click += new System.EventHandler(this.btnCancPrenotazione_Click);
+            this.btnCancPrenotazioni.Location = new System.Drawing.Point(696, 126);
+            this.btnCancPrenotazioni.Name = "btnCancPrenotazioni";
+            this.btnCancPrenotazioni.Size = new System.Drawing.Size(75, 23);
+            this.btnCancPrenotazioni.TabIndex = 20;
+            this.btnCancPrenotazioni.Text = "Cancella";
+            this.btnCancPrenotazioni.UseVisualStyleBackColor = true;
+            this.btnCancPrenotazioni.Click += new System.EventHandler(this.btnCancPrenotazione_Click);
             // 
-            // btnNuovoPrenotazione
+            // btnAddPrenotazioni
             // 
-            this.btnNuovoPrenotazione.Location = new System.Drawing.Point(666, 52);
-            this.btnNuovoPrenotazione.Name = "btnNuovoPrenotazione";
-            this.btnNuovoPrenotazione.Size = new System.Drawing.Size(75, 23);
-            this.btnNuovoPrenotazione.TabIndex = 19;
-            this.btnNuovoPrenotazione.Text = "Nuovo";
-            this.btnNuovoPrenotazione.UseVisualStyleBackColor = true;
+            this.btnAddPrenotazioni.Location = new System.Drawing.Point(696, 68);
+            this.btnAddPrenotazioni.Name = "btnAddPrenotazioni";
+            this.btnAddPrenotazioni.Size = new System.Drawing.Size(75, 23);
+            this.btnAddPrenotazioni.TabIndex = 19;
+            this.btnAddPrenotazioni.Text = "Nuovo";
+            this.btnAddPrenotazioni.UseVisualStyleBackColor = true;
             // 
-            // btnModPrenotazione
+            // btnModPrenotazioni
             // 
-            this.btnModPrenotazione.Location = new System.Drawing.Point(666, 81);
-            this.btnModPrenotazione.Name = "btnModPrenotazione";
-            this.btnModPrenotazione.Size = new System.Drawing.Size(75, 23);
-            this.btnModPrenotazione.TabIndex = 18;
-            this.btnModPrenotazione.Text = "Modifica";
-            this.btnModPrenotazione.UseVisualStyleBackColor = true;
+            this.btnModPrenotazioni.Location = new System.Drawing.Point(696, 97);
+            this.btnModPrenotazioni.Name = "btnModPrenotazioni";
+            this.btnModPrenotazioni.Size = new System.Drawing.Size(75, 23);
+            this.btnModPrenotazioni.TabIndex = 18;
+            this.btnModPrenotazioni.Text = "Modifica";
+            this.btnModPrenotazioni.UseVisualStyleBackColor = true;
             // 
             // datePrenotazioni
             // 
             this.datePrenotazioni.CustomFormat = "";
-            this.datePrenotazioni.Location = new System.Drawing.Point(666, 3);
+            this.datePrenotazioni.Location = new System.Drawing.Point(696, 19);
             this.datePrenotazioni.MinDate = new System.DateTime(2017, 1, 1, 0, 0, 0, 0);
             this.datePrenotazioni.Name = "datePrenotazioni";
             this.datePrenotazioni.Size = new System.Drawing.Size(200, 20);
@@ -1030,13 +1113,13 @@
             this.Column39});
             this.elencoPrenotazioni.DataSource = this.bindingPrenotazioni;
             this.elencoPrenotazioni.EnableHeadersVisualStyles = false;
-            this.elencoPrenotazioni.Location = new System.Drawing.Point(0, 0);
+            this.elencoPrenotazioni.Location = new System.Drawing.Point(0, 19);
             this.elencoPrenotazioni.MultiSelect = false;
             this.elencoPrenotazioni.Name = "elencoPrenotazioni";
             this.elencoPrenotazioni.ReadOnly = true;
             this.elencoPrenotazioni.RowHeadersVisible = false;
             this.elencoPrenotazioni.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.elencoPrenotazioni.Size = new System.Drawing.Size(660, 150);
+            this.elencoPrenotazioni.Size = new System.Drawing.Size(690, 279);
             this.elencoPrenotazioni.TabIndex = 0;
             // 
             // Column33
@@ -1179,6 +1262,108 @@
             this.nomecatDataGridViewTextBoxColumn.HeaderText = "nome_cat";
             this.nomecatDataGridViewTextBoxColumn.Name = "nomecatDataGridViewTextBoxColumn";
             // 
+            // bindingCategorie
+            // 
+            this.bindingCategorie.CurrentChanged += new System.EventHandler(this.bindingSource1_CurrentChanged);
+            // 
+            // Categorie
+            // 
+            this.Categorie.Controls.Add(this.button1);
+            this.Categorie.Controls.Add(this.button2);
+            this.Categorie.Controls.Add(this.button3);
+            this.Categorie.Controls.Add(this.label9);
+            this.Categorie.Controls.Add(this.elencoCategorie);
+            this.Categorie.Location = new System.Drawing.Point(4, 22);
+            this.Categorie.Name = "Categorie";
+            this.Categorie.Padding = new System.Windows.Forms.Padding(3);
+            this.Categorie.Size = new System.Drawing.Size(920, 298);
+            this.Categorie.TabIndex = 8;
+            this.Categorie.Text = "Categorie";
+            this.Categorie.UseVisualStyleBackColor = true;
+            this.Categorie.Click += new System.EventHandler(this.Categorie_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(3, 4);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(52, 13);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Categorie";
+            // 
+            // elencoCategorie
+            // 
+            this.elencoCategorie.AllowUserToAddRows = false;
+            this.elencoCategorie.AllowUserToDeleteRows = false;
+            this.elencoCategorie.AllowUserToResizeColumns = false;
+            this.elencoCategorie.AllowUserToResizeRows = false;
+            this.elencoCategorie.AutoGenerateColumns = false;
+            this.elencoCategorie.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.elencoCategorie.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.elencoCategorie.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.elencoCategorie.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewCheckBoxColumn1});
+            this.elencoCategorie.DataSource = this.bindingCategorie;
+            this.elencoCategorie.EnableHeadersVisualStyles = false;
+            this.elencoCategorie.Location = new System.Drawing.Point(0, 20);
+            this.elencoCategorie.MultiSelect = false;
+            this.elencoCategorie.Name = "elencoCategorie";
+            this.elencoCategorie.ReadOnly = true;
+            this.elencoCategorie.RowHeadersVisible = false;
+            this.elencoCategorie.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.elencoCategorie.Size = new System.Drawing.Size(288, 272);
+            this.elencoCategorie.TabIndex = 7;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "nome_cat";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Categorie";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "attivo";
+            this.dataGridViewCheckBoxColumn1.HeaderText = "Attivo";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
+            // 
+            // CategorieProd
+            // 
+            this.CategorieProd.DataPropertyName = "nome_cat";
+            this.CategorieProd.HeaderText = "Categorie";
+            this.CategorieProd.Name = "CategorieProd";
+            this.CategorieProd.ReadOnly = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(294, 78);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Cancella";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(294, 20);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Nuovo";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(294, 49);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 9;
+            this.button3.Text = "Modifica";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Amministrazione
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1187,47 +1372,53 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(904, 323);
-            this.Controls.Add(this.menu);
+            this.Controls.Add(this.btnCancProdotti);
             this.Name = "Amministrazione";
             this.Text = "Amministratione / Gestione contenuti";
             this.Load += new System.EventHandler(this.amministrazione_Load);
-            this.menu.ResumeLayout(false);
+            this.btnCancProdotti.ResumeLayout(false);
             this.prodotti.ResumeLayout(false);
+            this.prodotti.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.elencoProd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingProdotti)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.elencoCatProd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingCategorie)).EndInit();
             this.clienti.ResumeLayout(false);
+            this.clienti.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.elencoClienti)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingClienti)).EndInit();
             this.tavoli.ResumeLayout(false);
+            this.tavoli.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.elencoTavoli)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingTavoli)).EndInit();
             this.servizi.ResumeLayout(false);
             this.servizi.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.elencoServizi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingServizi)).EndInit();
             this.comande.ResumeLayout(false);
             this.comande.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.elencoServCom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.elencoComande)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingComande)).EndInit();
             this.prenotazioni.ResumeLayout(false);
             this.prenotazioni.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.elencoPrenotazioni)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingPrenotazioni)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingProdotti)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingCategorie)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingClienti)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingTavoli)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingServizi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingComande)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingPrenotazioni)).EndInit();
+            this.Categorie.ResumeLayout(false);
+            this.Categorie.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.elencoCategorie)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.TabControl menu;
+        private System.Windows.Forms.TabControl btnCancProdotti;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomecatDataGridViewTextBoxColumn2;
         private System.Windows.Forms.TabPage prodotti;
         private System.Windows.Forms.Button prodDel;
-        private System.Windows.Forms.Button prodNew;
-        private System.Windows.Forms.Button prodMod;
+        private System.Windows.Forms.Button btnAddProdotti;
+        private System.Windows.Forms.Button btnModProdotti;
         private System.Windows.Forms.TabControl subMenuProd;
         private System.Windows.Forms.TabPage clienti;
         private System.Windows.Forms.TabPage tavoli;
@@ -1250,9 +1441,9 @@
         private System.Windows.Forms.DataGridView elencoCatProd;
         private System.Windows.Forms.DataGridView elencoProd;
         private System.Windows.Forms.BindingSource bindingProdotti;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnCancClienti;
+        private System.Windows.Forms.Button btnAddClienti;
+        private System.Windows.Forms.Button btnModClienti;
         private System.Windows.Forms.DataGridView elencoClienti;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
@@ -1267,24 +1458,24 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
         private System.Windows.Forms.BindingSource bindingClienti;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnCancTavoli;
+        private System.Windows.Forms.Button btnAddTavoli;
+        private System.Windows.Forms.Button btnModTavoli;
         private System.Windows.Forms.DataGridView elencoTavoli;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column22;
         private System.Windows.Forms.BindingSource bindingTavoli;
         private System.Windows.Forms.DataGridView elencoServizi;
         private System.Windows.Forms.BindingSource bindingServizi;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button btnCancServizi;
+        private System.Windows.Forms.Button btnAddServizi;
+        private System.Windows.Forms.Button btnModoServizi;
         private System.Windows.Forms.DateTimePicker dateServizi;
         private System.Windows.Forms.BindingSource bindingComande;
         private System.Windows.Forms.DataGridView elencoComande;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button btnCancComande;
+        private System.Windows.Forms.Button btnAddComande;
+        private System.Windows.Forms.Button btnModComande;
         private System.Windows.Forms.DateTimePicker dateComande;
         private System.Windows.Forms.DataGridView elencoPrenotazioni;
         private System.Windows.Forms.BindingSource bindingPrenotazioni;
@@ -1295,9 +1486,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column37;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column38;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column39;
-        private System.Windows.Forms.Button btnCancPrenotazione;
-        private System.Windows.Forms.Button btnNuovoPrenotazione;
-        private System.Windows.Forms.Button btnModPrenotazione;
+        private System.Windows.Forms.Button btnCancPrenotazioni;
+        private System.Windows.Forms.Button btnAddPrenotazioni;
+        private System.Windows.Forms.Button btnModPrenotazioni;
         private System.Windows.Forms.DateTimePicker datePrenotazioni;
         private System.Windows.Forms.CheckBox checkServizi;
         private System.Windows.Forms.CheckBox checkComande;
@@ -1325,8 +1516,23 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column8;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TabPage Categorie;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridView elencoCategorie;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn CategorieProd;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
 

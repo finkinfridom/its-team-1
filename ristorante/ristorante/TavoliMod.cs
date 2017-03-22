@@ -12,31 +12,27 @@ using System.Windows.Forms;
 
 namespace ristorante
 {
-    public partial class Cassa : Form
+    public partial class TavoliMod : Form
     {
-        public Cassa()
+        DataTable tableTavoli = new DataTable();
+
+        public TavoliMod(string id)
         {
             InitializeComponent();
+            GetData(tableTavoli, "SELECT * FROM tavolo WHERE num_tavolo=" + id, bindingTavoli);
+            DataRowView current = (DataRowView)bindingTavoli.Current;
+            numTavolo.Text = current["num_tavolo"].ToString();
+            maxPosti.Text = current["max_posti"].ToString();
         }
 
-        private void creaServizio_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Cassa_Load(object sender, EventArgs e)
-        {
-            GetData("SELECT ora, cognome, num_persone, num_tavolo FROM prenotazione JOIN cliente ON prenotazione.cod_cliente=cliente.cod_cliente WHERE giorno=CURDATE() AND cod_prenotazione NOT IN (SELECT cod_prenotazione FROM servizio WHERE DATE(inizio) LIKE CURDATE()) ORDER BY ora", bindingPrenotazioni);
-        }
-
-        private void GetData(string selectCommand, BindingSource a)
+        private void GetData(DataTable table, string selectCommand, BindingSource a)
         {
             try
             {
                 string conn = ConfigurationManager.ConnectionStrings["db4free"].ConnectionString;
                 MySqlDataAdapter dataAdapter = new MySqlDataAdapter(selectCommand, conn);
                 MySqlCommandBuilder commandBuilder = new MySqlCommandBuilder(dataAdapter);
-                DataTable table = new DataTable();
+                //DataTable table = new DataTable();
                 table.Locale = System.Globalization.CultureInfo.InvariantCulture;
                 dataAdapter.Fill(table);
                 a.DataSource = table;
@@ -47,4 +43,5 @@ namespace ristorante
             }
         }
     }
+
 }

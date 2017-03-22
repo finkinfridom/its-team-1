@@ -70,6 +70,12 @@
       <DependentUpon>Cassa.cs</DependentUpon>
     </Compile>
     <Compile Include="Categoria.cs" />
+    <Compile Include="CategorieMod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategorieMod.Designer.cs">
+      <DependentUpon>CategorieMod.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clienti.cs" />
     <Compile Include="Comanda.cs" />
     <Compile Include="Cucina.cs">
@@ -80,23 +86,41 @@
     </Compile>
     <Compile Include="gender.cs" />
     <Compile Include="Ingredienti.cs" />
-    <Compile Include="logIn.cs">
+    <Compile Include="LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="logIn.Designer.cs">
-      <DependentUpon>logIn.cs</DependentUpon>
+    <Compile Include="LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
     </Compile>
     <Compile Include="oauthProvider.cs" />
     <Compile Include="Prenotazione.cs" />
     <Compile Include="ProdComanda.cs" />
     <Compile Include="ProdIngr.cs" />
     <Compile Include="Prodotti.cs" />
+    <Compile Include="ClientiMod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientiMod.Designer.cs">
+      <DependentUpon>ClientiMod.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiziMod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiziMod.Designer.cs">
+      <DependentUpon>ServiziMod.cs</DependentUpon>
+    </Compile>
     <Compile Include="Servizio.cs" />
     <Compile Include="ServSpese.cs" />
     <Compile Include="Spese.cs" />
     <Compile Include="StatoPiatto.cs" />
+    <Compile Include="TavoliMod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TavoliMod.Designer.cs">
+      <DependentUpon>TavoliMod.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tavolo.cs" />
     <EmbeddedResource Include="Amministrazione.resx">
       <DependentUpon>Amministrazione.cs</DependentUpon>
@@ -104,11 +128,17 @@
     <EmbeddedResource Include="Cassa.resx">
       <DependentUpon>Cassa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CategorieMod.resx">
+      <DependentUpon>CategorieMod.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cucina.resx">
       <DependentUpon>Cucina.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="logIn.resx">
-      <DependentUpon>logIn.cs</DependentUpon>
+    <EmbeddedResource Include="LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientiMod.resx">
+      <DependentUpon>ClientiMod.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -119,6 +149,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ServiziMod.resx">
+      <DependentUpon>ServiziMod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TavoliMod.resx">
+      <DependentUpon>TavoliMod.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Categoria.datasource" />
     <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlCommand.datasource" />

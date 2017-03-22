@@ -1,6 +1,6 @@
 ﻿namespace ristorante
 {
-    partial class logIn
+    partial class LogIn
     {
         /// <summary>
         /// Required designer variable.
@@ -42,7 +42,6 @@
             this.btnC = new System.Windows.Forms.Button();
             this.btnCC = new System.Windows.Forms.Button();
             this.erroreLbl = new System.Windows.Forms.Label();
-            this.verifica = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // codice
@@ -186,22 +185,11 @@
             this.erroreLbl.Visible = false;
             this.erroreLbl.Click += new System.EventHandler(this.erroreLbl_Click);
             // 
-            // verifica
-            // 
-            this.verifica.Location = new System.Drawing.Point(15, 379);
-            this.verifica.Name = "verifica";
-            this.verifica.Size = new System.Drawing.Size(209, 36);
-            this.verifica.TabIndex = 14;
-            this.verifica.Text = "OK";
-            this.verifica.UseVisualStyleBackColor = true;
-            this.verifica.Click += new System.EventHandler(this.verifica_Click);
-            // 
-            // logIn
+            // LogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(247, 427);
-            this.Controls.Add(this.verifica);
+            this.ClientSize = new System.Drawing.Size(247, 361);
             this.Controls.Add(this.erroreLbl);
             this.Controls.Add(this.btnCC);
             this.Controls.Add(this.btnC);
@@ -216,7 +204,7 @@
             this.Controls.Add(this.btn8);
             this.Controls.Add(this.btn7);
             this.Controls.Add(this.codice);
-            this.Name = "logIn";
+            this.Name = "LogIn";
             this.Text = "Seleziona modalità";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -239,6 +227,5 @@
         private System.Windows.Forms.Button btnC;
         private System.Windows.Forms.Button btnCC;
         private System.Windows.Forms.Label erroreLbl;
-        private System.Windows.Forms.Button verifica;
     }
 }
